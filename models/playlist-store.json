@@ -1,0 +1,36 @@
+{
+  "playlistCollection": [
+    {
+      "id": "8b301260-d267-11eb-a8f7-591ae1064ded",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "test",
+      "songs": [
+        {
+          "id": "8f12a3c0-d267-11eb-a8f7-591ae1064ded",
+          "title": "et",
+          "artist": "et",
+          "duration": 124
+        },
+        {
+          "id": "29ef4b50-e410-11eb-9121-974deda99ff9",
+          "title": "Song 2",
+          "artist": "Blur",
+          "duration": 2
+        },
+        {
+          "id": "33e075d0-e410-11eb-9121-974deda99ff9",
+          "title": "Dr",
+          "artist": "Love",
+          "duration": 22
+        },
+        {
+          "id": "9d66d070-e411-11eb-9051-c9a534a44979",
+          "title": "run faster",
+          "artist": "Blur",
+          "duration": 10
+        }
+      ],
+      "duration": 152
+    }
+  ]
+}
