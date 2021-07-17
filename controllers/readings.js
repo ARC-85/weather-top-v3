@@ -17,18 +17,18 @@ const reading = {
   },
 
   update(request, response) {
-    const playlistId = request.params.id;
-    const songId = request.params.songid;
-    const song = playlistStore.getSong(playlistId, songId)
-    const newSong = {
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration)
+    const stationId = request.params.id;
+    const readingId = request.params.readingid;
+    const reading = stationsStore.getReading(stationId, readingId)
+    const newReading = {
+      code: Number(request.body.code),
+      temperature: Number(request.body.temperature),
+      wind: Number(request.body.wind)
     };
-    logger.debug(`Updating Song ${songId} from Playlist ${playlistId}`);
-    playlistStore.updateSong(song, newSong);
-    response.redirect("/playlist/" + playlistId);
+    logger.debug(`Updating Reading ${readingId} from Station ${stationId}`);
+    stationsStore.updateReading(reading, newReading);
+    response.redirect("/stations/" + stationId);
   }
 };
 
-module.exports = song;
+module.exports = readings;
