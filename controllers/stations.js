@@ -1,9 +1,9 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const playlistStore = require("../models/playlist-store");
+const stationsStore = require("../models/stations-store");
 const uuid = require("uuid");
-const playlistAnalytics = require("../utils/playlist-analytics");
+const stationsAnalytics = require("../utils/stations-analytics");
 
 const playlist = {
   index(request, response) {
