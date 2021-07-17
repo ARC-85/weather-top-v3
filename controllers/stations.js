@@ -14,7 +14,7 @@ const station = {
     const currentReading = stationsAnalytics.getCurrentReading(station);
     console.log(currentReading);
     const viewData = {
-      title: "Station",
+      name: "Station",
       station: stationsStore.getStation(stationId),
       currentReading: currentReading
     };
@@ -29,19 +29,19 @@ const station = {
     response.redirect("/stations/" + stationId);
   },
 
-  addSong(request, response) {
-    const playlistId = request.params.id;
-    const playlist = playlistStore.getPlaylist(playlistId);
-    const newSong = {
+  addReading(request, response) {
+    const stationId = request.params.id;
+    const station = stationsStore.getStation(stationId);
+    const newReading = {
       id: uuid.v1(),
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration)
+      code: request.body.code,
+      temperature: Number(request.body.temperature),
+      wind: Number(request.body.wind)
     };
-    logger.debug("New Song = ", newSong);
-    playlistStore.addSong(playlistId, newSong);
-    response.redirect("/playlist/" + playlistId);
+    logger.debug("New Reading = ", newReading);
+    stationsStore.addReading(stationId, newReading);
+    response.redirect("/stations/" + stationId);
   }
 };
 
-module.exports = playlist;
+module.exports = stations;
