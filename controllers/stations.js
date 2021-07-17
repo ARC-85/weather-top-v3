@@ -5,28 +5,28 @@ const stationsStore = require("../models/stations-store");
 const uuid = require("uuid");
 const stationsAnalytics = require("../utils/stations-analytics");
 
-const playlist = {
+const station = {
   index(request, response) {
-    const playlistId = request.params.id;
-    logger.debug("Playlist id = ", playlistId);
+    const stationId = request.params.id;
+    logger.debug("Station id = ", stationId);
 
-    const playlist = playlistStore.getPlaylist(playlistId);
-    const shortestSong = playlistAnalytics.getShortestSong(playlist);
-    console.log(shortestSong);
+    const station = stationsStore.getStation(stationId);
+    const currentReading = stationsAnalytics.getCurrentReading(station);
+    console.log(currentReading);
     const viewData = {
-      title: "Playlist",
-      playlist: playlistStore.getPlaylist(playlistId),
-      shortestSong: shortestSong
+      title: "Station",
+      station: stationsStore.getStation(stationId),
+      currentReading: currentReading
     };
-    response.render("playlist", viewData);
+    response.render("stations", viewData);
   },
 
-  deleteSong(request, response) {
-    const playlistId = request.params.id;
-    const songId = request.params.songid;
-    logger.debug(`Deleting Song ${songId} from Playlist ${playlistId}`);
-    playlistStore.removeSong(playlistId, songId);
-    response.redirect("/playlist/" + playlistId);
+  deleteReading(request, response) {
+    const stationId = request.params.id;
+    const readingId = request.params.readingid;
+    logger.debug(`Deleting Reading ${readingId} from Station ${stationId}`);
+    stationsStore.removeReading(stationId, readingId);
+    response.redirect("/stations/" + stationId);
   },
 
   addSong(request, response) {
