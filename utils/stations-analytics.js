@@ -2,18 +2,18 @@
 
 const stationsAnalytics = {
 
-  getNewestReading(station) {
-    let newestReading = null;
+  getMinimumTemperature(station) {
+    let minimumTemperature = null;
     if (station.readings.length > 0) {
-      newestReading = station.readings[0];
-      for (let i = 1; i < playlist.songs.length; i++) {
-        if (playlist.songs[i].duration < shortestSong.duration) {
-          shortestSong = playlist.songs[i];
+      minimumTemperature = station.readings[0].temperature;
+      for (let i = 1; i < station.readings.length; i++) {
+        if (station.readings[i].temperature < minimumTemperature) {
+          minimumTemperature = station.readings[i].temperature;
         }        
       }
     }
-    return shortestSong;
+    return minimumTemperature;
   }
 };
 
-module.exports = playlistAnalytics;
+module.exports = stationsAnalytics;
