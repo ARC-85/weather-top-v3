@@ -13,6 +13,13 @@
       "email": "marge@simpson.com",
       "password": "secret",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "Andrew",
+      "lastName": "Cameron",
+      "email": "andrewrosscameron@gmail.com",
+      "password": "pass",
+      "id": "b301ce40-e7bc-11eb-b9dc-fd7466059b6b"
     }
   ]
 }

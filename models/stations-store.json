@@ -1,10 +1,32 @@
 {
   "stationsCollection": [
     {
-      "id": "36ee43d0-e7ba-11eb-ae38-f1742fc7710f",
+      "id": "dded5030-e7bb-11eb-996a-c1848d37974b",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "Moycullen",
-      "readings": []
+      "name": "Moycullen",
+      "readings": [
+        {
+          "id": "863f37d0-e7bc-11eb-b9dc-fd7466059b6b",
+          "code": 700,
+          "temperature": 22,
+          "wind": 20
+        }
+      ],
+      "temperature": 58
+    },
+    {
+      "id": "bbd2bbb0-e7bc-11eb-b9dc-fd7466059b6b",
+      "userid": "b301ce40-e7bc-11eb-b9dc-fd7466059b6b",
+      "name": "NUI Galway",
+      "readings": [
+        {
+          "id": "c26c56c0-e7bc-11eb-b9dc-fd7466059b6b",
+          "code": 700,
+          "temperature": 22,
+          "wind": 30
+        }
+      ],
+      "temperature": 22
     }
   ]
 }

@@ -11,12 +11,12 @@ const stations = {
     logger.debug("Station id = ", stationId);
 
     const station = stationsStore.getStation(stationId);
-    const currentReading = stationsAnalytics.getCurrentReading(station);
-    console.log(currentReading);
+    const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
+    console.log(minimumTemperature);
     const viewData = {
       name: "Station",
       station: stationsStore.getStation(stationId),
-      currentReading: currentReading
+      minimumTemperature: minimumTemperature
     };
     response.render("stations", viewData);
   },
