@@ -7,30 +7,30 @@
       "readings": [
         {
           "id": "8f12a3c0-d267-11eb-a8f7-591ae1064ded",
-          "code": 0001,
+          "code": 1,
           "temperature": 24,
           "wind": 60
         },
         {
           "id": "29ef4b50-e410-11eb-9121-974deda99ff9",
-          "code": 0010,
-          "temperature": 0011,
+          "code": 2,
+          "temperature": 25,
           "wind": 70
         },
         {
           "id": "33e075d0-e410-11eb-9121-974deda99ff9",
-          "code": 0020,
-          "temperature": 00,
-          "duration": 22
+          "code": 3,
+          "temperature": 26,
+          "wind": 80
         },
         {
           "id": "9d66d070-e411-11eb-9051-c9a534a44979",
-          "title": "run faster",
-          "artist": "Blur",
-          "duration": 10
+          "code": 4,
+          "temperature": 27,
+          "wind": 90
         }
       ],
-      "duration": 152
+      "temperature": 27
     }
   ]
 }
