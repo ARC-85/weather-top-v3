@@ -1,3 +1,10 @@
 {
-  "stationsCollection": []
+  "stationsCollection": [
+    {
+      "id": "36ee43d0-e7ba-11eb-ae38-f1742fc7710f",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "title": "Moycullen",
+      "readings": []
+    }
+  ]
 }
