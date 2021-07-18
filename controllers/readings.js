@@ -3,7 +3,7 @@
 const logger = require("../utils/logger");
 const stationsStore = require("../models/stations-store");
 
-const reading = {
+const readings = {
   index(request, response) {
     const stationId = request.params.id;
     const readingId = request.params.readingid;

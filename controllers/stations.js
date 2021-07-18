@@ -5,7 +5,7 @@ const stationsStore = require("../models/stations-store");
 const uuid = require("uuid");
 const stationsAnalytics = require("../utils/stations-analytics");
 
-const station = {
+const stations = {
   index(request, response) {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
