@@ -1,26 +1,26 @@
 {
-  "playlistCollection": [
+  "stationsCollection": [
     {
       "id": "8b301260-d267-11eb-a8f7-591ae1064ded",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "test",
-      "songs": [
+      "code": 0000,
+      "readings": [
         {
           "id": "8f12a3c0-d267-11eb-a8f7-591ae1064ded",
-          "title": "et",
-          "artist": "et",
-          "duration": 124
+          "code": 0001,
+          "temperature": 24,
+          "wind": 60
         },
         {
           "id": "29ef4b50-e410-11eb-9121-974deda99ff9",
-          "title": "Song 2",
-          "artist": "Blur",
-          "duration": 2
+          "code": 0010,
+          "temperature": 0011,
+          "wind": 70
         },
         {
           "id": "33e075d0-e410-11eb-9121-974deda99ff9",
-          "title": "Dr",
-          "artist": "Love",
+          "code": 0020,
+          "temperature": 00,
           "duration": 22
         },
         {

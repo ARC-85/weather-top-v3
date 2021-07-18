@@ -57,18 +57,18 @@ const stationsStore = {
     this.store.save();
   },
 
-  getReading(id, songId) {
-    const playList = this.store.findOneBy(this.collection, { id: id });
-    const songs = playList.songs.filter(song => song.id == songId);
-    return songs[0];
+  getReading(id, readingId) {
+    const station = this.store.findOneBy(this.collection, { id: id });
+    const readings = station.readings.filter(reading => reading.id == readingId);
+    return readings[0];
   },
 
-  updateSong(song, updatedSong) {
-    song.title = updatedSong.title;
-    song.artist = updatedSong.artist;
-    song.duration = updatedSong.duration;
+  updateReading(reading, updatedReading) {
+    reading.code = updatedReading.code;
+    reading.temperature = updatedReading.temperature;
+    reading.wind = updatedReading.wind;
     this.store.save();
   }
 };
 
-module.exports = playlistStore;
+module.exports = stationsStore;
