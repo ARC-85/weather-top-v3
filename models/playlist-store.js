@@ -3,61 +3,61 @@
 const _ = require("lodash");
 const JsonStore = require("./json-store");
 
-const playlistStore = {
-  store: new JsonStore("./models/playlist-store.json", {
-    playlistCollection: []
+const stationsStore = {
+  store: new JsonStore("./models/stations-store.json", {
+    stationsCollection: []
   }),
-  collection: "playlistCollection",
+  collection: "stationsCollection",
 
-  getAllPlaylists() {
+  getAllStations() {
     return this.store.findAll(this.collection);
   },
 
-  getPlaylist(id) {
+  getStation(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
-  getUserPlaylists(userid) {
+  getUserStations(userid) {
     return this.store.findBy(this.collection, { userid: userid });
   },
 
-  addPlaylist(playlist) {
-    this.store.add(this.collection, playlist);
+  addStation(station) {
+    this.store.add(this.collection, station);
     this.store.save();
   },
 
-  removePlaylist(id) {
-    const playlist = this.getPlaylist(id);
-    this.store.remove(this.collection, playlist);
+  removeStation(id) {
+    const station = this.getStation(id);
+    this.store.remove(this.collection, station);
     this.store.save();
   },
 
-  removeAllPlaylists() {
+  removeAllStations() {
     this.store.removeAll(this.collection);
     this.store.save();
   },
 
-  addSong(id, song) {
-    const playlist = this.getPlaylist(id);
-    playlist.songs.push(song);
+  addReading(id, reading) {
+    const station = this.getStation(id);
+    station.readings.push(reading);
 
-    let duration = 0;
-    for (let i = 0; i < playlist.songs.length; i++) {
-      duration += playlist.songs[i].duration;
+    let temperature = 0;
+    for (let i = 0; i < station.readings.length; i++) {
+      temperature += station.readings[i].temperature;
     }
 
-    playlist.duration = duration;
+    station.temperature = temperature;
     this.store.save();
   },
 
-  removeSong(id, songId) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
-    _.remove(songs, { id: songId });
+  removeReading(id, readingId) {
+    const station = this.getStation(id);
+    const readings = station.readings;
+    _.remove(readings, { id: readingId });
     this.store.save();
   },
 
-  getSong(id, songId) {
+  getReading(id, songId) {
     const playList = this.store.findOneBy(this.collection, { id: id });
     const songs = playList.songs.filter(song => song.id == songId);
     return songs[0];
