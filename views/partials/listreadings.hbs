@@ -1,32 +1,32 @@
 <table class="ui table">
   <thead>
     <tr>
-      <th>Song</th>
-      <th>Artist</th>
-      <th>Duration</th>
+      <th>Code</th>
+      <th>Temperature</th>
+      <th>Wind</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    {{#each playlist.songs}}
+    {{#each station.readings}}
       <tr>
         <td>
-          {{title}}
+          {{code}}
         </td>
         <td>
-          {{artist}}
+          {{temperature}}
         </td>
         <td>
-          {{duration}}
+          {{wind}}
         </td>
         <td>
-          <a href="/song/{{../playlist.id}}/editsong/{{id}}" class="ui icon button">
+          <a href="/readings/{{../station.id}}/editreading/{{id}}" class="ui icon button">
             <i class="pencil alternate icon"></i>
           </a>
         </td>
         <td>
-          <a href="/playlist/{{../playlist.id}}/deletesong/{{id}}" class="ui icon button">
+          <a href="/stations/{{../station.id}}/deletereading/{{id}}" class="ui icon button">
             <i class="icon trash"></i>
           </a>
         </td>
