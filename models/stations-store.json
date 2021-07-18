@@ -1,36 +1,3 @@
 {
-  "stationsCollection": [
-    {
-      "id": "8b301260-d267-11eb-a8f7-591ae1064ded",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "test",
-      "readings": [
-        {
-          "id": "8f12a3c0-d267-11eb-a8f7-591ae1064ded",
-          "code": 1,
-          "temperature": 24,
-          "wind": 60
-        },
-        {
-          "id": "29ef4b50-e410-11eb-9121-974deda99ff9",
-          "code": 2,
-          "temperature": 25,
-          "wind": 70
-        },
-        {
-          "id": "33e075d0-e410-11eb-9121-974deda99ff9",
-          "code": 3,
-          "temperature": 26,
-          "wind": 80
-        },
-        {
-          "id": "9d66d070-e411-11eb-9051-c9a534a44979",
-          "code": 4,
-          "temperature": 27,
-          "wind": 90
-        }
-      ],
-      "temperature": 27
-    }
-  ]
+  "stationsCollection": []
 }

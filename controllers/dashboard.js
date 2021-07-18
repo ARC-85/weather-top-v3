@@ -11,7 +11,7 @@ const dashboard = {
     const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
       title: "Stations Dashboard",
-      playlists: stationsStore.getUserStations(loggedInUser.id)
+      stations: stationsStore.getUserStations(loggedInUser.id)
     };
     logger.info("about to render", stationsStore.getAllStations());
     response.render("dashboard", viewData);
