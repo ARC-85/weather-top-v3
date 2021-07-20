@@ -4,14 +4,18 @@ const accounts = require("./accounts.js");
 const logger = require("../utils/logger");
 const stationsStore = require("../models/stations-store");
 const uuid = require("uuid");
+const stationsAnalytics = require("../utils/stations-analytics");
 
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
+    const stations = stationsStore.getUserStations(loggedInUser.id);
+    const latestReading = stationsAnalytics.getLatestReading(stations);
     const viewData = {
       title: "Stations Dashboard",
-      stations: stationsStore.getUserStations(loggedInUser.id)
+      stations: stationsStore.getUserStations(loggedInUser.id),
+      latestReading: latestReading
     };
     logger.info("about to render", stationsStore.getAllStations());
     response.render("dashboard", viewData);
