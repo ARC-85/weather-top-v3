@@ -40,7 +40,7 @@ const stationsStore = {
   addReading(id, reading) {
     const station = this.getStation(id);
     station.readings.push(reading);
-    const date = new Date();
+    const latest = new Date();
 
     let temperature = 0;
     for (let i = 0; i < station.readings.length; i++) {
@@ -48,6 +48,7 @@ const stationsStore = {
     }
 
     station.temperature = temperature;
+    station.latest = latest;
     this.store.save();
   },
 
