@@ -66,7 +66,9 @@ const stationsStore = {
   updateReading(reading, updatedReading) {
     reading.code = updatedReading.code;
     reading.temperature = updatedReading.temperature;
-    reading.wind = updatedReading.wind;
+    reading.windSpeed = updatedReading.windSpeed;
+    reading.pressure = updatedReading.pressure;
+    reading.windDirection = updatedReading.windDirection;
     this.store.save();
   }
 };

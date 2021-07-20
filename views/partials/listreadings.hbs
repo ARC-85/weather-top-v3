@@ -3,9 +3,9 @@
     <tr>
       <th>Code</th>
       <th>Temperature</th>
-      <th>Wind</th>
-      <th></th>
-      <th></th>
+      <th>Wind Speed</th>
+      <th>Pressure</th>
+      <th>Wind Direction</th>      
     </tr>
   </thead>
   <tbody>
@@ -18,7 +18,13 @@
           {{temperature}}
         </td>
         <td>
-          {{wind}}
+          {{windSpeed}}
+        </td>
+        <td>
+          {{pressure}}
+        </td>
+        <td>
+          {{windDirection}}
         </td>
         <td>
           <a href="/readings/{{../station.id}}/editreading/{{id}}" class="ui icon button">
