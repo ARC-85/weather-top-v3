@@ -12,11 +12,14 @@ const stations = {
 
     const station = stationsStore.getStation(stationId);
     const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
+    const latestReading = stationsAnalytics.getLatestReading(station);
     console.log(minimumTemperature);
+    console.log(latestReading);
     const viewData = {
       name: "Station",
       station: stationsStore.getStation(stationId),
-      minimumTemperature: minimumTemperature
+      minimumTemperature: minimumTemperature,
+      latestReading: latestReading
     };
     response.render("stations", viewData);
   },
