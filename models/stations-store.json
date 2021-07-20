@@ -2,6 +2,7 @@
   "stationsCollection": [
     {
       "id": "01",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Tramore",
       "readings": [
         {
@@ -32,6 +33,7 @@
     },
     {
       "id": "05",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Dunmore",
       "readings": [
         {
@@ -53,7 +55,7 @@
       ]
     },
     {
-      "id": "3ebccdf0-e992-11eb-be97-fd7561f41918",
+      "id": "199dac00-e993-11eb-a258-89869f2945a4",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Moycullen",
       "readings": []
