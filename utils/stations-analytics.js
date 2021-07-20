@@ -16,7 +16,7 @@ const stationsAnalytics = {
   },
   
   getLatestReading(station) {
-    let latestReading = station.readings[0].time;
+    const latestReading = station.reading[3].temperature;
     return latestReading;
   },
 };

@@ -6,14 +6,6 @@
       "name": "Tramore",
       "readings": [
         {
-          "id": "02",
-          "code": 800,
-          "temperature": 0.5,
-          "windSpeed": 3.5,
-          "pressure": 1002,
-          "windDirection": 90
-        },
-        {
           "id": "03",
           "code": 700,
           "temperature": 6,
@@ -46,10 +38,19 @@
           "pressure": 5,
           "windDirection": 3,
           "time": "2021-07-20T20:52:39.404Z"
+        },
+        {
+          "id": "ef0598e0-e9a1-11eb-8f25-07a7f7f36e7a",
+          "code": 700,
+          "temperature": 2,
+          "windSpeed": 3,
+          "pressure": 4,
+          "windDirection": 5,
+          "time": "2021-07-20T21:32:07.407Z"
         }
       ],
-      "temperature": 31.5,
-      "latest": "2021-07-20T21:05:25.009Z"
+      "temperature": 25,
+      "latest": "2021-07-20T21:32:07.407Z"
     },
     {
       "id": "05",
