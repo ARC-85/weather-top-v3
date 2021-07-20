@@ -2,31 +2,55 @@
   "stationsCollection": [
     {
       "id": "01",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Moycullen",
+      "name": "Tramore",
       "readings": [
         {
-          "id": "863f37d0-e7bc-11eb-b9dc-fd7466059b6b",
+          "id": "02",
+          "code": 800,
+          "temperature": 0.5,
+          "windSpeed": 3.5,
+          "pressure": 1002,
+          "windDirection": 90
+        },
+        {
+          "id": "03",
           "code": 700,
-          "temperature": 22,
-          "wind": 20
+          "temperature": 6,
+          "windSpeed": 2,
+          "pressure": 1004,
+          "windDirection": 95
+        },
+        {
+          "id": "04",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "pressure": 1005,
+          "windDirection": 101
         }
-      ],
-      "temperature": 58
+      ]
     },
     {
-      "id": "bbd2bbb0-e7bc-11eb-b9dc-fd7466059b6b",
-      "userid": "b301ce40-e7bc-11eb-b9dc-fd7466059b6b",
-      "name": "NUI Galway",
+      "id": "05",
+      "name": "Dunmore",
       "readings": [
         {
-          "id": "c26c56c0-e7bc-11eb-b9dc-fd7466059b6b",
+          "id": "06",
           "code": 700,
-          "temperature": 22,
-          "wind": 30
+          "temperature": 0,
+          "windSpeed": 1,
+          "pressure": 999,
+          "windDirection": 98
+        },
+        {
+          "id": "07",
+          "code": 200,
+          "temperature": 0.5,
+          "windSpeed": 3.5,
+          "pressure": 1000,
+          "windDirection": 102
         }
-      ],
-      "temperature": 22
+      ]
     }
   ]
 }
