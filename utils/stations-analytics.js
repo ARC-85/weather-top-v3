@@ -15,10 +15,7 @@ const stationsAnalytics = {
     return minimumTemperature;
   },
   
-  getLatestReading(station) {
-    const latestReading = station.reading[3].temperature;
-    return latestReading;
-  },
+  
 };
 
 module.exports = stationsAnalytics;
