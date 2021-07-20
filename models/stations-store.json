@@ -28,8 +28,19 @@
           "windSpeed": 1,
           "pressure": 1005,
           "windDirection": 101
+        },
+        {
+          "id": "e87eedc0-e99a-11eb-9488-dda3c6ef931b",
+          "code": 600,
+          "temperature": 7,
+          "windSpeed": 3,
+          "pressure": 1000,
+          "windDirection": 349,
+          "time": "2021-07-20T20:41:49.981Z"
         }
-      ]
+      ],
+      "temperature": 25.5,
+      "latest": "2021-07-20T20:42:41.777Z"
     },
     {
       "id": "05",
