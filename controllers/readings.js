@@ -25,7 +25,8 @@ const readings = {
       temperature: Number(request.body.temperature),
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
-      windDirection: Number(request.body.windDirection)
+      windDirection: Number(request.body.windDirection),
+      time: new Date()
     };
     logger.debug(`Updating Reading ${readingId} from Station ${stationId}`);
     stationsStore.updateReading(reading, newReading);
