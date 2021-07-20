@@ -40,6 +40,7 @@ const stationsStore = {
   addReading(id, reading) {
     const station = this.getStation(id);
     station.readings.push(reading);
+    const date = new Date();
 
     let temperature = 0;
     for (let i = 0; i < station.readings.length; i++) {
@@ -69,6 +70,7 @@ const stationsStore = {
     reading.windSpeed = updatedReading.windSpeed;
     reading.pressure = updatedReading.pressure;
     reading.windDirection = updatedReading.windDirection;
+    reading.time = new Date;
     this.store.save();
   }
 };
