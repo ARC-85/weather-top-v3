@@ -46,15 +46,6 @@
           "pressure": 5,
           "windDirection": 3,
           "time": "2021-07-20T20:52:39.404Z"
-        },
-        {
-          "id": "041a9e50-e99e-11eb-a509-cfb72f8e6d76",
-          "code": 400,
-          "temperature": 5,
-          "windSpeed": 4,
-          "pressure": 4,
-          "windDirection": 4,
-          "time": "2021-07-20T21:04:04.790Z"
         }
       ],
       "temperature": 31.5,
