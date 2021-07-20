@@ -52,8 +52,10 @@ const stationsStore = {
     this.store.save();
   },
   
-  getLatestReading(station) {
-    const latestReading = station.readings[3].temperature;
+  getLatestReading(id) {
+    const station = this.getStation(id);
+    let x = station.readings.length;
+    const latestReading = station.readings[0].temperature;
     return latestReading;
   },
 
