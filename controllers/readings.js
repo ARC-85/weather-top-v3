@@ -23,7 +23,9 @@ const readings = {
     const newReading = {
       code: Number(request.body.code),
       temperature: Number(request.body.temperature),
-      wind: Number(request.body.wind)
+      windSpeed: Number(request.body.windSpeed),
+      pressure: Number(request.body.pressure),
+      windDirection: Number(request.body.windDirection)
     };
     logger.debug(`Updating Reading ${readingId} from Station ${stationId}`);
     stationsStore.updateReading(reading, newReading);
