@@ -27,17 +27,14 @@ const stationsAnalytics = {
     return weatherType;
   },
   
-  getMinimumTemperature(station) {
-    let minimumTemperature = null;
+  getCelsius(station) {
+    let celsius = null;
     if (station.readings.length > 0) {
-      minimumTemperature = station.readings[0].temperature;
-      for (let i = 1; i < station.readings.length; i++) {
-        if (station.readings[i].temperature < minimumTemperature) {
-          minimumTemperature = station.readings[i].temperature;
-        }
-      }
+      celsius = station.readings[station.readings.length - 1].temperature + " Celsius";
+    } else {
+      celsius = "No readings available.";
     }
-    return minimumTemperature;
+    return celsius;
   },
 
   getMinimumTemperature(station) {
