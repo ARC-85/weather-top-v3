@@ -1,8 +1,64 @@
 {{> menu}}
 
+<section class="ui segment ">
+    <div class="ui five column grid">
+        <div class="black column">
+            <h1>
+                {{station.name}}
+            </h1>
+        </div>
+        <div class="column">
+            <img class="ui small centered image">
+            <h1 class="ui purple header">
+                Weather
+            </h1>
+            <h3>{{weatherType}}</h3>
+            <img class="ui tiny centered image" src="/public/images/weather/${station.weatherType()}.png" }>
+
+        </div>
+        <div class="column">
+            <img class="ui small centered image">
+            <h1 class="ui blue header">
+                Temperature
+            </h1>
+            <h3>{{celsius}}</h3>
+            <h3>{{fahrenheit}}</h3>
+            <h3>{{minimumTemperature}}</h3>
+            <h3>{{maximumTemperature}}</h3>
+            <img class="ui tiny centered image" src="/public/images/trends/${station.trendTemp()}.png" }>
+            <h5 class="ui center aligned header">{{trendTemperature}}</h5>
+        </div>
+        <div class="column">
+            <img class="ui small centered image" src="/public/images/wind.png">
+            <h1 class="ui red header">
+                Wind
+            </h1>
+            <h3>${station.windBeaufort()}</h3>
+            <h3>${station.windDirection()}</h3>
+            <h3>${station.windChill()}</h3>
+            <h3>${station.minWind()}</h3>
+            <h3>${station.maxWind()}</h3>
+            <img class="ui tiny centered image" src="/public/images/trends/${station.trendWind()}.png" }>
+            <h5 class="ui center aligned header">${station.trendWind()}</h5>
+        </div>
+        <div class="column">
+            <img class="ui small centered image" src="/public/images/pressure.png">
+            <h1 class="ui pink header">
+                Pressure
+            </h1>
+            <h3>${station.pressure()}</h3>
+            <h3>${station.minPress()}</h3>
+            <h3>${station.maxPress()}</h3>
+            <img class="ui tiny centered image" src="/public/images/trends/${station.trendPressure()}.png" }>
+            <h5 class="ui center aligned header">${station.trendPressure()}</h5>
+        </div>
+    </div>
+</section>
+
+
 <section class="ui center aligned middle aligned segment">
   <h2 class="ui header">
-    {{theList.name}}
+    {{station.name}}
   </h2>
   <h4> Minimum Temperature: {{latestReading}}</h4>
   {{> listreadings}}
