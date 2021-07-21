@@ -12,6 +12,7 @@ const stations = {
 
     const station = stationsStore.getStation(stationId);
     const weatherType = stationsAnalytics.getWeatherType(station);
+    const celsius = stationsAnalytics.getCelsius(station);
     const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
     const latestReading = stationsAnalytics.getLatestReading(station);
     console.log(minimumTemperature);
@@ -20,6 +21,7 @@ const stations = {
       name: "Station",
       station: stationsStore.getStation(stationId),
       weatherType: weatherType,
+      celsius: celsius,
       minimumTemperature: minimumTemperature,
       latestReading: latestReading
     };

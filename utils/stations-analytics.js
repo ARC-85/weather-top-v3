@@ -36,6 +36,18 @@ const stationsAnalytics = {
     }
     return celsius;
   },
+  
+  getFahrenheit(station) {
+    let fahrenheit = null;
+    let fahrenheitTemp = null;
+    if (station.readings.length > 0) {
+      fahrenheitTemp = station.readings[station.readings.length - 1].temperature * 9 / 5 + 32; 
+      fahrenheit = fahrenheitTemp + " Celsius";
+    } else {
+      celsius = "No readings available.";
+    }
+    return celsius;
+  },
 
   getMinimumTemperature(station) {
     let minimumTemperature = null;
