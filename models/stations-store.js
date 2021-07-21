@@ -42,12 +42,14 @@ const stationsStore = {
     const station = this.getStation(id);
     station.readings.push(reading);
     const latest = new Date();
+    const weatherType = stationsAnalytics.getWeatherType(station);
 
     let temperature = 0;
     for (let i = 0; i < station.readings.length; i++) {
       temperature += station.readings[i].temperature;
     }
 
+    station.weatherType = weatherType;
     station.temperature = temperature;
     station.latest = latest;
     this.store.save();

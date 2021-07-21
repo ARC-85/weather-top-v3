@@ -3,7 +3,7 @@
 const stationsAnalytics = {
   getWeatherType(station) {
     let weatherType = null;
-     const readings = station.readings;
+    const readings = station.readings;
     if (station.readings.length > 0) {
       if (station.readings[station.readings.length - 1].code === 100) {
         weatherType = "Clear";
