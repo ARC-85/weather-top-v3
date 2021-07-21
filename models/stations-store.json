@@ -56,10 +56,28 @@
           "pressure": 800,
           "windDirection": 300,
           "time": "2021-07-20T22:38:19.318Z"
+        },
+        {
+          "id": "d1002620-ea60-11eb-b7d4-87465bef40f5",
+          "code": 500,
+          "temperature": 4,
+          "windSpeed": 4,
+          "pressure": 800,
+          "windDirection": 300,
+          "time": "2021-07-21T20:18:30.915Z"
+        },
+        {
+          "id": "426ab9b0-ea61-11eb-b68a-57fec18d5007",
+          "code": 50,
+          "temperature": 4,
+          "windSpeed": 4,
+          "pressure": 800,
+          "windDirection": 12,
+          "time": "2021-07-21T20:21:41.196Z"
         }
       ],
-      "temperature": 29,
-      "latest": "2021-07-20T22:38:19.318Z"
+      "temperature": 37,
+      "latest": "2021-07-21T20:21:41.196Z"
     },
     {
       "id": "05",

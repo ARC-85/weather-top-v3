@@ -4,21 +4,21 @@ const stationsAnalytics = {
   getWeatherType(station) {
     let weatherType = null;
     if (station.readings.length > 0) {
-      if (station.readings[station.readings.length - 1].code == 100) {
+      if (station.readings[station.readings.length - 1].code === 100) {
         weatherType = "Clear";
-      } else if (station.readings[station.readings.length - 1].code == 200) {
+      } else if (station.readings[station.readings.length - 1].code === 200) {
         weatherType = "Partial Clouds";
-      } else if (station.readings[station.readings.length - 1].code == 300) {
+      } else if (station.readings[station.readings.length - 1].code === 300) {
         weatherType = "Cloudy";
-      } else if (station.readings[station.readings.length - 1].code == 400) {
+      } else if (station.readings[station.readings.length - 1].code === 400) {
         weatherType = "Light Showers";
-      } else if (station.readings[station.readings.length - 1].code == 500) {
+      } else if (station.readings[station.readings.length - 1].code === 500) {
         weatherType = "Heavy Showers";
-      } else if (station.readings[station.readings.length - 1].code == 600) {
+      } else if (station.readings[station.readings.length - 1].code === 600) {
         weatherType = "Rain";
-      } else if (station.readings[station.readings.length - 1].code == 700) {
+      } else if (station.readings[station.readings.length - 1].code === 700) {
         weatherType = "Snow";
-      } else if (station.readings[station.readings.length - 1].code == 800) {
+      } else if (station.readings[station.readings.length - 1].code === 800) {
         weatherType = "Thunder";
       } else weatherType = "Unrecognised code";
     } else {

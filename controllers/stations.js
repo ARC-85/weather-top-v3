@@ -11,6 +11,7 @@ const stations = {
     logger.debug("Station id = ", stationId);
 
     const station = stationsStore.getStation(stationId);
+    const weatherType = stationsAnalytics.getWeatherType(station);
     const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
     const latestReading = stationsAnalytics.getLatestReading(station);
     console.log(minimumTemperature);
@@ -18,6 +19,7 @@ const stations = {
     const viewData = {
       name: "Station",
       station: stationsStore.getStation(stationId),
+      weatherType: weatherType,
       minimumTemperature: minimumTemperature,
       latestReading: latestReading
     };
