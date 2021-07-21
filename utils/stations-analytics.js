@@ -1,33 +1,31 @@
 "use strict";
 
 const stationsAnalytics = {
-  
   getWeatherType(station) {
     let weatherType = null;
-        if (readings.size() != 0) {
-            Reading currentReading = readings.get(readings.size() - 1);
-            if (currentReading.getCode() == 100) {
-                return "Clear";
-            } else if (currentReading.getCode() == 200) {
-                return "Partial Clouds";
-            } else if (currentReading.getCode() == 300) {
-                return "Cloudy";
-            } else if (currentReading.getCode() == 400) {
-                return "Light Showers";
-            } else if (currentReading.getCode() == 500) {
-                return "Heavy Showers";
-            } else if (currentReading.getCode() == 600) {
-                return "Rain";
-            } else if (currentReading.getCode() == 700) {
-                return "Snow";
-            } else if (currentReading.getCode() == 800) {
-                return "Thunder";
-            } else
-                return "Unrecognised code";
-        } else {
-            return "No readings available.";
-        }
-    },
+    if (station.readings.length > 0) {
+      if (station.readings[station.readings.length - 1].code == 100) {
+        weatherType = "Clear";
+      } else if (station.readings[station.readings.length - 1].code == 200) {
+        weatherType = "Partial Clouds";
+      } else if (station.readings[station.readings.length - 1].code == 300) {
+        weatherType = "Cloudy";
+      } else if (station.readings[station.readings.length - 1].code == 400) {
+        weatherType = "Light Showers";
+      } else if (station.readings[station.readings.length - 1].code == 500) {
+        weatherType = "Heavy Showers";
+      } else if (station.readings[station.readings.length - 1].code == 600) {
+        weatherType = "Rain";
+      } else if (station.readings[station.readings.length - 1].code == 700) {
+        weatherType = "Snow";
+      } else if (station.readings[station.readings.length - 1].code == 800) {
+        weatherType = "Thunder";
+      } else weatherType = "Unrecognised code";
+    } else {
+      weatherType = "No readings available.";
+    }
+    return weatherType;
+  },
 
   getMinimumTemperature(station) {
     let minimumTemperature = null;
@@ -36,18 +34,17 @@ const stationsAnalytics = {
       for (let i = 1; i < station.readings.length; i++) {
         if (station.readings[i].temperature < minimumTemperature) {
           minimumTemperature = station.readings[i].temperature;
-        }        
+        }
       }
     }
     return minimumTemperature;
   },
-  
+
   getLatestReading(station) {
     let x = station.readings.length;
-    const latestReading = station.readings[x-1].time;
+    const latestReading = station.readings[x - 1].time;
     return latestReading;
   }
-
 };
 
 module.exports = stationsAnalytics;
