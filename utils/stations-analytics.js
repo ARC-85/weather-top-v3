@@ -42,11 +42,11 @@ const stationsAnalytics = {
     let fahrenheitTemp = null;
     if (station.readings.length > 0) {
       fahrenheitTemp = station.readings[station.readings.length - 1].temperature * 9 / 5 + 32; 
-      fahrenheit = fahrenheitTemp + " Celsius";
+      fahrenheit = fahrenheitTemp + " Fahrenheit";
     } else {
-      celsius = "No readings available.";
+      fahrenheit = "No readings available.";
     }
-    return celsius;
+    return fahrenheit;
   },
 
   getMinimumTemperature(station) {
