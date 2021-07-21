@@ -11,8 +11,10 @@ const dashboard = {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     const stations = stationsStore.getUserStations(loggedInUser.id);
-    
-    const weatherType = stationsAnalytics.getWeatherType(station);
+    const stationId = request.params.id;
+    const station = stationsStore.getStation(stationId);
+    const weatherType = stationsAnalytics.getWeatherType(stationId);
+    const readings = station.readings;
     
     const viewData = {
       title: "Stations Dashboard",
