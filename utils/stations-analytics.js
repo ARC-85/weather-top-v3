@@ -55,11 +55,28 @@ const stationsAnalytics = {
       minimumTemperature = station.readings[0].temperature;
       for (let i = 1; i < station.readings.length; i++) {
         if (station.readings[i].temperature < minimumTemperature) {
-          minimumTemperature = station.readings[i].temperature;
+          minimumTemperature = ;
         }
       }
+    } else {
+      minimumTemperature = "No readings available.";
     }
     return minimumTemperature;
+  },
+  
+  getMaximumTemperature(station) {
+    let maximumTemperature = null;
+    if (station.readings.length > 0) {
+      maximumTemperature = station.readings[0].temperature;
+      for (let i = 1; i < station.readings.length; i++) {
+        if (station.readings[i].temperature > maximumTemperature) {
+          maximumTemperature = "Max Temp: " + station.readings[i].temperature + " Celsius";
+        }
+      }
+    } else {
+      maximumTemperature = "No readings available.";
+    }
+    return maximumTemperature;
   },
 
   getLatestReading(station) {
