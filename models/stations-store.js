@@ -59,6 +59,8 @@ const stationsStore = {
     const station = this.getStation(id);
     const readings = station.readings;
     _.remove(readings, { id: readingId });
+    const weatherType = stationsAnalytics.getWeatherType(station);
+    station.weatherType = weatherType;
     this.store.save();
   },
 
