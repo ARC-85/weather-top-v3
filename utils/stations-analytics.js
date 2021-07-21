@@ -55,7 +55,7 @@ const stationsAnalytics = {
       minimumTemperature = station.readings[0].temperature;
       for (let i = 1; i < station.readings.length; i++) {
         if (station.readings[i].temperature < minimumTemperature) {
-          minimumTemperature = ;
+          minimumTemperature = "Min Temp: " + station.readings[i].temperature + " Celsius";
         }
       }
     } else {
