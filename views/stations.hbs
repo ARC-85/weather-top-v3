@@ -33,24 +33,24 @@
             <h1 class="ui red header">
                 Wind
             </h1>
-            <h3>${station.windBeaufort()}</h3>
-            <h3>${station.windDirection()}</h3>
-            <h3>${station.windChill()}</h3>
-            <h3>${station.minWind()}</h3>
-            <h3>${station.maxWind()}</h3>
+            <h3>{{windBeaufort}}</h3>
+            <h3>{{windDirection}}</h3>
+            <h3>{{windChill}}</h3>
+            <h3>{{minWind}}</h3>
+            <h3>{{maxWind}}</h3>
             <img class="ui tiny centered image" src="/public/images/trends/${station.trendWind()}.png" }>
-            <h5 class="ui center aligned header">${station.trendWind()}</h5>
+            <h5 class="ui center aligned header">{{trendWind}}</h5>
         </div>
         <div class="column">
             <img class="ui small centered image" src="/public/images/pressure.png">
             <h1 class="ui pink header">
                 Pressure
             </h1>
-            <h3>${station.pressure()}</h3>
-            <h3>${station.minPress()}</h3>
-            <h3>${station.maxPress()}</h3>
+            <h3>{{pressure}}</h3>
+            <h3>{{minPress}}</h3>
+            <h3>{{maxPress}}</h3>
             <img class="ui tiny centered image" src="/public/images/trends/${station.trendPressure()}.png" }>
-            <h5 class="ui center aligned header">${station.trendPressure()}</h5>
+            <h5 class="ui center aligned header">{{trendPressure}}</h5>
         </div>
     </div>
 </section>
