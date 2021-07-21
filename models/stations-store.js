@@ -73,7 +73,35 @@ const stationsStore = {
     reading.windDirection = updatedReading.windDirection;
     reading.time = new Date;
     this.store.save();
-  }
+  },
+  
+  getWeatherType(id) {
+    const station = this.getStation(id);
+    const readings = station.readings;
+    let weatherType = null;
+    if (station.readings.length > 0) {
+      if (station.readings[station.readings.length - 1].code === 100) {
+        weatherType = "Clear";
+      } else if (station.readings[station.readings.length - 1].code === 200) {
+        weatherType = "Partial Clouds";
+      } else if (station.readings[station.readings.length - 1].code === 300) {
+        weatherType = "Cloudy";
+      } else if (station.readings[station.readings.length - 1].code === 400) {
+        weatherType = "Light Showers";
+      } else if (station.readings[station.readings.length - 1].code === 500) {
+        weatherType = "Heavy Showers";
+      } else if (station.readings[station.readings.length - 1].code === 600) {
+        weatherType = "Rain";
+      } else if (station.readings[station.readings.length - 1].code === 700) {
+        weatherType = "Snow";
+      } else if (station.readings[station.readings.length - 1].code === 800) {
+        weatherType = "Thunder";
+      } else weatherType = "Unrecognised code";
+    } else {
+      weatherType = "No readings available.";
+    }
+    return weatherType;
+  },
 };
 
 module.exports = stationsStore;
