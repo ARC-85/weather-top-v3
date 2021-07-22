@@ -94,9 +94,10 @@
           "time": "2021-07-21T23:26:43.241Z"
         }
       ],
-      "temperature": 49,
-      "latest": "2021-07-21T23:31:42.247Z",
-      "weatherType": "Light Showers"
+      "temperature": 77,
+      "latest": "2021-07-22T07:37:06.500Z",
+      "weatherType": "Light Showers",
+      "latestReading": "2021-07-21T23:26:43.241Z"
     },
     {
       "id": "05",

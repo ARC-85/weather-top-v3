@@ -43,6 +43,7 @@ const stationsStore = {
     station.readings.push(reading);
     const latest = new Date();
     const weatherType = stationsAnalytics.getWeatherType(station);
+    const latestReading = stationsAnalytics.getLatestReading(station);
 
     let temperature = 0;
     for (let i = 0; i < station.readings.length; i++) {
@@ -50,6 +51,7 @@ const stationsStore = {
     }
 
     station.weatherType = weatherType;
+    station.latestReading = latestReading;
     station.temperature = temperature;
     station.latest = latest;
     this.store.save();
@@ -60,7 +62,9 @@ const stationsStore = {
     const readings = station.readings;
     _.remove(readings, { id: readingId });
     const weatherType = stationsAnalytics.getWeatherType(station);
+    const latestReading = stationsAnalytics.getLatestReading(station);
     station.weatherType = weatherType;
+    station.latestReading = latestReading;
     this.store.save();
   },
 

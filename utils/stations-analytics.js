@@ -81,12 +81,16 @@ const stationsAnalytics = {
   },
 
   getLatestReading(station) {
-    let x = station.readings.length;
+    let latestReading = null;
     if (station.readings.length > 0) {
-      const latestReading = station.readings[x - 1].time;
-      return latestReading;
+      latestReading = station.readings[station.readings.length - 1].time;
+    } else {
+      latestReading = "No readings available.";
     }
-  }
+    return latestReading;
+  },
+  
+  
 };
 
 module.exports = stationsAnalytics;
