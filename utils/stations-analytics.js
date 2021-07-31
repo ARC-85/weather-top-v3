@@ -85,32 +85,78 @@ const stationsAnalytics = {
     let windBeaufort = null;
     const readings = station.readings;
     if (station.readings.length > 0) {
-      if (station.readings[station.readings.length - 1].wind <= 1) {
+      if (station.readings[station.readings.length - 1].windSpeed <= 1) {
                 windBeaufort = "Beaufort 0 (Calm)";
-            } else if ((station.readings[station.readings.length - 1].wind <== 5)) {
+            } else if ((station.readings[station.readings.length - 1].windSpeed > 1) && (station.readings[station.readings.length - 1].windSpeed <= 5)) {
                 windBeaufort = "Beaufort 1 (Light Air)";
-            } else if (station.readings[station.readings.length - 1].wind > 5 && station.readings[station.readings.length - 1].wind <= 11) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 5 && station.readings[station.readings.length - 1].windSpeed <= 11) {
                 windBeaufort = "Beaufort 2 (Light Breeze)";
-            } else if (station.readings[station.readings.length - 1].wind > 11 && station.readings[station.readings.length - 1].wind <= 19) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 11 && station.readings[station.readings.length - 1].windSpeed <= 19) {
                 windBeaufort = "Beaufort 3 (Gentle Breeze)";
-            } else if (station.readings[station.readings.length - 1].wind > 19 && station.readings[station.readings.length - 1].wind <= 28) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 19 && station.readings[station.readings.length - 1].windSpeed <= 28) {
                 windBeaufort = "Beaufort 4 (Moderate Breeze)";
-            } else if (station.readings[station.readings.length - 1].wind > 28 && station.readings[station.readings.length - 1].wind <= 38) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 28 && station.readings[station.readings.length - 1].windSpeed <= 38) {
                 windBeaufort = "Beaufort 5 (Fresh Breeze)";
-            } else if (station.readings[station.readings.length - 1].wind > 38 && station.readings[station.readings.length - 1].wind <= 49) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 38 && station.readings[station.readings.length - 1].windSpeed <= 49) {
                 windBeaufort = "Beaufort 6 (Strong Breeze)";
-            } else if (station.readings[station.readings.length - 1].wind > 49 && station.readings[station.readings.length - 1].wind <= 61) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 49 && station.readings[station.readings.length - 1].windSpeed <= 61) {
                 windBeaufort = "Beaufort 7 (Near Gale)";
-            } else if (station.readings[station.readings.length - 1].wind > 61 && station.readings[station.readings.length - 1].wind <= 74) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 61 && station.readings[station.readings.length - 1].windSpeed <= 74) {
                 windBeaufort = "Beaufort 8 (Gale)";
-            } else if (station.readings[station.readings.length - 1].wind > 74 && station.readings[station.readings.length - 1].wind <= 88) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 74 && station.readings[station.readings.length - 1].windSpeed <= 88) {
                 windBeaufort = "Beaufort 9 (Severe Gale)";
-            } else if (station.readings[station.readings.length - 1].wind > 88 && station.readings[station.readings.length - 1].wind <= 102) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 88 && station.readings[station.readings.length - 1].windSpeed <= 102) {
                 windBeaufort = "Beaufort 10 (Strong Storm)";
-            } else if (station.readings[station.readings.length - 1].wind > 102 && station.readings[station.readings.length - 1].wind <= 117) {
+            } else if (station.readings[station.readings.length - 1].windSpeed > 102 && station.readings[station.readings.length - 1].windSpeed <= 117) {
                 windBeaufort = "Beaufort 11 (Violent Storm)";
             } else
                 windBeaufort = "Perfect Storm";
+    } else {
+      windBeaufort = "No readings available.";
+    }
+    return windBeaufort;
+  },
+  
+  getWindDirection(station) {
+    let windDirect = null;
+    const readings = station.readings;
+    if (station.readings.length > 0) {
+      if ((station.readings[station.readings.length - 1].windDirection >= 348.75) && (station.readings[station.readings.length - 1].windDirection <= 360.00)) {
+                return "North";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 0) && (station.readings[station.readings.length - 1].windDirection < 11.25)) {
+                return "North";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 11.25) && (currentReading.getWindDirection() < 33.75)) {
+                return "North North East";
+            } else if ((currentReading.getWindDirection() >= 33.75) && (currentReading.getWindDirection() < 56.25)) {
+                return "North East";
+            } else if ((currentReading.getWindDirection() >= 56.25) && (currentReading.getWindDirection() < 78.75)) {
+                return "East North East";
+            } else if ((currentReading.getWindDirection() >= 78.75) && (currentReading.getWindDirection() < 101.25)) {
+                return "East";
+            } else if ((currentReading.getWindDirection() >= 101.25) && (currentReading.getWindDirection() < 123.75)) {
+                return "East South East";
+            } else if ((currentReading.getWindDirection() >= 123.75) && (currentReading.getWindDirection() < 146.25)) {
+                return "South East";
+            } else if ((currentReading.getWindDirection() >= 146.25) && (currentReading.getWindDirection() < 168.75)) {
+                return "South South East";
+            } else if ((currentReading.getWindDirection() >= 168.75) && (currentReading.getWindDirection() < 191.25)) {
+                return "South";
+            } else if ((currentReading.getWindDirection() >= 191.25) && (currentReading.getWindDirection() < 213.75)) {
+                return "South South West";
+            } else if ((currentReading.getWindDirection() >= 213.75) && (currentReading.getWindDirection() < 236.25)) {
+                return "South West";
+            } else if ((currentReading.getWindDirection() >= 236.25) && (currentReading.getWindDirection() < 258.75)) {
+                return "West South West";
+            } else if ((currentReading.getWindDirection() >= 258.75) && (currentReading.getWindDirection() < 281.25)) {
+                return "West";
+            } else if ((currentReading.getWindDirection() >= 281.25) && (currentReading.getWindDirection() < 303.75)) {
+                return "West North West";
+            } else if ((currentReading.getWindDirection() >= 303.75) && (currentReading.getWindDirection() < 326.25)) {
+                return "North West";
+            } else if ((currentReading.getWindDirection() >= 326.25) && (currentReading.getWindDirection() < 348.75)) {
+                return "North North West";
+            } else
+                return "Even Breeze";
     } else {
       windBeaufort = "No readings available.";
     }
