@@ -167,11 +167,41 @@ const stationsAnalytics = {
     let windTemp = null;
     if (station.readings.length > 0) {
       windChill = 13.12 + 0.6215 * station.readings[station.readings.length - 1].temperature - 11.37 * (Math.pow(station.readings[station.readings.length - 1].windSpeed, 0.16)) + 0.3965 * (Math.pow(station.readings[station.readings.length - 1].temperature, 0.16));
-      windTemp = "Feels like " + windChill + " Celsius";
+      windTemp = "Feels like " + (Math.round(windChill * 100) / 100).toFixed(2) + " Celsius";
     } else {
       windTemp = "No readings available.";
     }
     return windTemp;
+  },
+  
+  getMinimumWind(station) {
+    let minimumWind = null;
+    if (station.readings.length > 0) {
+      minimumWind = station.readings[0].windSpeed;
+      for (let i = 1; i < station.readings.length; i++) {
+        if (station.readings[i].temperature < minimumTemperature) {
+          minimumTemperature = "Min Temp: " + station.readings[i].temperature + " Celsius";
+        }
+      }
+    } else {
+      minimumTemperature = "No readings available.";
+    }
+    return minimumTemperature;
+  },
+  
+  getMaximumTemperature(station) {
+    let maximumTemperature = null;
+    if (station.readings.length > 0) {
+      maximumTemperature = station.readings[0].temperature;
+      for (let i = 1; i < station.readings.length; i++) {
+        if (station.readings[i].temperature > maximumTemperature) {
+          maximumTemperature = "Max Temp: " + station.readings[i].temperature + " Celsius";
+        }
+      }
+    } else {
+      maximumTemperature = "No readings available.";
+    }
+    return maximumTemperature;
   },
   
   getPressureHpa(station) {
