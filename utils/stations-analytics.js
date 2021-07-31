@@ -21,12 +21,10 @@ const stationsAnalytics = {
       } else if (station.readings[station.readings.length - 1].code === 700) {
         weatherType = "Snow";
       } else if (station.readings[station.readings.length - 1].code === 800) {
-        weatherType = "bolt";
-        weatherIcon = "trash";
+        weatherType = "Thunder";
       } else weatherType = "Unrecognised code";
     } else {
       weatherType = "No readings available.";
-      weatherIcon = ""
     }
     return weatherType;
     return weatherIcon;
