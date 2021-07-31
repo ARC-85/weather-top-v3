@@ -26,7 +26,6 @@ const stationsAnalytics = {
       weatherType = "No readings available.";
     }
     return weatherType;
-    return weatherIcon;
   },
   
   getCelsius(station) {
@@ -161,6 +160,18 @@ const stationsAnalytics = {
       windDirect = "No readings available.";
     }
     return windDirect;
+  },
+  
+  getWindChill(station) {
+    let windChill = null;
+    let windTemp = null;
+    if (station.readings.length > 0) {
+      windChill = 13.12 + 0.6215 * station.readings[station.readings.length - 1].temperature - 11.37 * (Math.pow(station.readings[station.readings.length - 1].windSpeed, 0.16)) + 0.3965 * (Math.pow(station.readings[station.readings.length - 1].temperature, 0.16));
+      windTemp = "Feels like " + windChill + " Celsius";
+    } else {
+      windTemp = "No readings available.";
+    }
+    return windTemp;
   },
   
   getPressureHpa(station) {

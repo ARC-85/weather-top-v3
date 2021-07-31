@@ -14,6 +14,7 @@ const stations = {
     const weatherType = stationsAnalytics.getWeatherType(station);
     const celsius = stationsAnalytics.getCelsius(station);
     const fahrenheit = stationsAnalytics.getFahrenheit(station);
+    const windTemp = stationsAnalytics.getFahrenheit(station);
     const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
     const maximumTemperature = stationsAnalytics.getMaximumTemperature(station);
     const windBeaufort = stationsAnalytics.getWindBeaufort(station);
@@ -28,6 +29,7 @@ const stations = {
       weatherType: weatherType,
       celsius: celsius,
       fahrenheit: fahrenheit,
+      windTemp: windTemp,
       minimumTemperature: minimumTemperature,
       maximumTemperature: maximumTemperature,
       windBeaufort: windBeaufort,
