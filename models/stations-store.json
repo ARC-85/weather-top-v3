@@ -6,53 +6,19 @@
       "name": "Tramore",
       "readings": [
         {
-          "id": "03",
-          "code": 700,
-          "temperature": 6,
-          "windSpeed": 2,
-          "pressure": 1004,
-          "windDirection": 95
-        },
-        {
-          "id": "04",
-          "code": 700,
-          "temperature": 8,
-          "windSpeed": 1,
-          "pressure": 1005,
-          "windDirection": 101
-        },
-        {
-          "id": "e87eedc0-e99a-11eb-9488-dda3c6ef931b",
-          "code": 600,
-          "temperature": 7,
-          "windSpeed": 3,
-          "pressure": 1000,
-          "windDirection": 349,
-          "time": "2021-07-20T20:41:49.981Z"
-        },
-        {
-          "id": "6b952ac0-e99c-11eb-932a-197ca9ec159e",
-          "code": 700,
-          "temperature": 2,
-          "windSpeed": 4,
-          "pressure": 5,
-          "windDirection": 3,
-          "time": "2021-07-20T20:52:39.404Z"
-        },
-        {
-          "id": "ef0598e0-e9a1-11eb-8f25-07a7f7f36e7a",
-          "code": 700,
-          "temperature": 2,
-          "windSpeed": 3,
-          "pressure": 4,
-          "windDirection": 5,
-          "time": "2021-07-20T21:32:07.407Z"
+          "id": "c8c8e8c0-f244-11eb-bffc-4b0a2167c5ab",
+          "code": 400,
+          "temperature": 4,
+          "windSpeed": 12,
+          "pressure": 800,
+          "windDirection": 12,
+          "time": "2021-07-31T21:18:00.524Z"
         }
       ],
-      "temperature": 33,
-      "latest": "2021-07-31T19:10:38.927Z",
-      "weatherType": "Snow",
-      "latestReading": "2021-07-20T21:32:07.407Z"
+      "temperature": 29,
+      "latest": "2021-07-31T21:18:00.525Z",
+      "weatherType": "Light Showers",
+      "latestReading": "2021-07-31T21:18:00.524Z"
     },
     {
       "id": "05",

@@ -178,30 +178,30 @@ const stationsAnalytics = {
     let minimumWind = null;
     if (station.readings.length > 0) {
       minimumWind = station.readings[0].windSpeed;
-      for (let i = 1; i < station.readings.length; i++) {
-        if (station.readings[i].temperature < minimumTemperature) {
-          minimumTemperature = "Min Temp: " + station.readings[i].temperature + " Celsius";
+      for (let i = 0; i < station.readings.length; i++) {
+        if (station.readings[i].windSpeed < minimumWind) {
+          minimumWind = "Min Wind: " + station.readings[i].windSpeed + " km/hr";
         }
       }
     } else {
-      minimumTemperature = "No readings available.";
+      minimumWind = "No readings available.";
     }
-    return minimumTemperature;
+    return minimumWind;
   },
   
-  getMaximumTemperature(station) {
-    let maximumTemperature = null;
+  getMaximumWind(station) {
+    let maximumWind = null;
     if (station.readings.length > 0) {
-      maximumTemperature = station.readings[0].temperature;
-      for (let i = 1; i < station.readings.length; i++) {
-        if (station.readings[i].temperature > maximumTemperature) {
-          maximumTemperature = "Max Temp: " + station.readings[i].temperature + " Celsius";
+      maximumWind = station.readings[0].windSpeed;
+      for (let i = 0; i < station.readings.length; i++) {
+        if (station.readings[i].windSpeed > maximumWind) {
+          maximumWind = "Max Wind: " + station.readings[i].windSpeed + " km/hr";
         }
       }
     } else {
-      maximumTemperature = "No readings available.";
+      maximumWind = "No readings available.";
     }
-    return maximumTemperature;
+    return maximumWind;
   },
   
   getPressureHpa(station) {
