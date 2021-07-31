@@ -16,6 +16,7 @@ const stations = {
     const fahrenheit = stationsAnalytics.getFahrenheit(station);
     const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
     const maximumTemperature = stationsAnalytics.getMaximumTemperature(station);
+    const windBeaufort = stationsAnalytics.getWindBeaufort(station);
     const pressureHpa = stationsAnalytics.getPressureHpa(station);
     const latestReading = stationsAnalytics.getLatestReading(station);
     console.log(minimumTemperature);
@@ -28,6 +29,7 @@ const stations = {
       fahrenheit: fahrenheit,
       minimumTemperature: minimumTemperature,
       maximumTemperature: maximumTemperature,
+      windBeaufort: windBeaufort,
       pressureHpa: pressureHpa,
       latestReading: latestReading
     };
