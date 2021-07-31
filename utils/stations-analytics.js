@@ -3,6 +3,7 @@
 const stationsAnalytics = {
   getWeatherType(station) {
     let weatherType = null;
+    let weatherIcon = null;
     const readings = station.readings;
     if (station.readings.length > 0) {
       if (station.readings[station.readings.length - 1].code === 100) {
@@ -21,11 +22,14 @@ const stationsAnalytics = {
         weatherType = "Snow";
       } else if (station.readings[station.readings.length - 1].code === 800) {
         weatherType = "Thunder";
+        weatherIcon = "trash";
       } else weatherType = "Unrecognised code";
     } else {
       weatherType = "No readings available.";
+      weatherIcon = ""
     }
     return weatherType;
+    return weatherIcon;
   },
   
   getCelsius(station) {
