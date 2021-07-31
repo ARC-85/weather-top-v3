@@ -3,7 +3,6 @@
 const stationsAnalytics = {
   getWeatherType(station) {
     let weatherType = null;
-    let weatherIcon = null;
     const readings = station.readings;
     if (station.readings.length > 0) {
       if (station.readings[station.readings.length - 1].code === 100) {
@@ -80,6 +79,43 @@ const stationsAnalytics = {
       maximumTemperature = "No readings available.";
     }
     return maximumTemperature;
+  },
+  
+  getWindBeaufort(station) {
+    let windBeaufort = null;
+    const readings = station.readings;
+    if (station.readings.length > 0) {
+      if (station.readings[station.readings.length - 1].wind <= 1) {
+                return "Beaufort 0 (Calm)";
+            } else if (station.readings[station.readings.length - 1].wind > 1 && station.readings[station.readings.length - 1].wind <= 5) {
+                return "Beaufort 1 (Light Air)";
+            } else if (station.readings[station.readings.length - 1].wind > 5 && station.readings[station.readings.length - 1].wind <= 11) {
+                return "Beaufort 2 (Light Breeze)";
+            } else if (station.readings[station.readings.length - 1].wind > 11 && station.readings[station.readings.length - 1].wind <= 19) {
+                return "Beaufort 3 (Gentle Breeze)";
+            } else if (station.readings[station.readings.length - 1].wind > 19 && station.readings[station.readings.length - 1].wind <= 28) {
+                return "Beaufort 4 (Moderate Breeze)";
+            } else if (station.readings[station.readings.length - 1].wind > 28 && station.readings[station.readings.length - 1].wind <= 38) {
+                return "Beaufort 5 (Fresh Breeze)";
+            } else if (station.readings[station.readings.length - 1].wind > 1 && station.readings[station.readings.length - 1].wind <= 5) {
+                return "Beaufort 6 (Strong Breeze)";
+            } else if ((currentReading.getWind() > 49) && (currentReading.getWind() <= 61)) {
+                return "Beaufort 7 (Near Gale)";
+            } else if ((currentReading.getWind() > 61) && (currentReading.getWind() <= 74)) {
+                return "Beaufort 8 (Gale)";
+            } else if ((currentReading.getWind() > 74) && (currentReading.getWind() <= 88)) {
+                return "Beaufort 9 (Severe Gale)";
+            } else if ((currentReading.getWind() > 88) && (currentReading.getWind() <= 102)) {
+                return "Beaufort 10 (Strong Storm)";
+            } else if ((currentReading.getWind() > 102) && (currentReading.getWind() <= 117)) {
+                return "Beaufort 11 (Violent Storm)";
+            } else
+                return "Perfect Storm";
+    } else {
+      weatherType = "No readings available.";
+    }
+    return weatherType;
+    return weatherIcon;
   },
   
   getPressureHpa(station) {

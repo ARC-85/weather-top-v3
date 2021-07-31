@@ -65,30 +65,12 @@
           "pressure": 800,
           "windDirection": 300,
           "time": "2021-07-21T20:18:30.915Z"
-        },
-        {
-          "id": "426ab9b0-ea61-11eb-b68a-57fec18d5007",
-          "code": 50,
-          "temperature": 4,
-          "windSpeed": 4,
-          "pressure": 800,
-          "windDirection": 12,
-          "time": "2021-07-21T20:21:41.196Z"
-        },
-        {
-          "id": "cf70adb0-ea7a-11eb-b373-472f0163b326",
-          "code": 800,
-          "temperature": 4,
-          "windSpeed": 20,
-          "pressure": 800,
-          "windDirection": 12,
-          "time": "2021-07-21T23:24:35.211Z"
         }
       ],
       "temperature": 77,
       "latest": "2021-07-22T07:37:06.500Z",
-      "weatherType": "Thunder",
-      "latestReading": "2021-07-21T23:24:35.211Z"
+      "weatherType": "Heavy Showers",
+      "latestReading": "2021-07-21T20:18:30.915Z"
     },
     {
       "id": "05",
