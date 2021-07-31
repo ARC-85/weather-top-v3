@@ -80,14 +80,14 @@ const stationsAnalytics = {
     return maximumTemperature;
   },
   
-  getPressure(station) {
-    let pressure = null;
+  getPressureHpa(station) {
+    let pressureHpa = null;
     if (station.readings.length > 0) {
-      pressure = station.readings[station.readings.length - 1].pressure + " hPa";
+      pressureHpa = station.readings[station.readings.length - 1].pressure + " hPa";
     } else {
-      pressure = "No readings available.";
+      pressureHpa = "No readings available.";
     }
-    return pressure;
+    return pressureHpa;
   },
 
   getLatestReading(station) {
