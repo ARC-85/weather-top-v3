@@ -13,12 +13,39 @@
           "pressure": 800,
           "windDirection": 12,
           "time": "2021-07-31T21:18:00.524Z"
+        },
+        {
+          "id": "9cbb7c10-f245-11eb-8e84-39e17ba23f18",
+          "code": 400,
+          "temperature": 4,
+          "windSpeed": 3,
+          "pressure": 800,
+          "windDirection": 300,
+          "time": "2021-07-31T21:23:56.113Z"
+        },
+        {
+          "id": "f7750a40-f245-11eb-8e84-39e17ba23f18",
+          "code": 800,
+          "temperature": 32,
+          "windSpeed": 8,
+          "pressure": 800,
+          "windDirection": 12,
+          "time": "2021-07-31T21:26:28.324Z"
+        },
+        {
+          "id": "70728d00-f246-11eb-8e84-39e17ba23f18",
+          "code": 600,
+          "temperature": 2,
+          "windSpeed": 20,
+          "pressure": 1000,
+          "windDirection": 0,
+          "time": "2021-07-31T21:29:51.312Z"
         }
       ],
-      "temperature": 29,
-      "latest": "2021-07-31T21:18:00.525Z",
-      "weatherType": "Light Showers",
-      "latestReading": "2021-07-31T21:18:00.524Z"
+      "temperature": 42,
+      "latest": "2021-07-31T21:29:51.312Z",
+      "weatherType": "Rain",
+      "latestReading": "2021-07-31T21:29:51.312Z"
     },
     {
       "id": "05",
