@@ -122,45 +122,45 @@ const stationsAnalytics = {
     const readings = station.readings;
     if (station.readings.length > 0) {
       if ((station.readings[station.readings.length - 1].windDirection >= 348.75) && (station.readings[station.readings.length - 1].windDirection <= 360.00)) {
-                return "North";
+                windDirect = "North";
             } else if ((station.readings[station.readings.length - 1].windDirection >= 0) && (station.readings[station.readings.length - 1].windDirection < 11.25)) {
-                return "North";
-            } else if ((station.readings[station.readings.length - 1].windDirection >= 11.25) && (currentReading.getWindDirection() < 33.75)) {
-                return "North North East";
-            } else if ((currentReading.getWindDirection() >= 33.75) && (currentReading.getWindDirection() < 56.25)) {
-                return "North East";
-            } else if ((currentReading.getWindDirection() >= 56.25) && (currentReading.getWindDirection() < 78.75)) {
-                return "East North East";
-            } else if ((currentReading.getWindDirection() >= 78.75) && (currentReading.getWindDirection() < 101.25)) {
-                return "East";
-            } else if ((currentReading.getWindDirection() >= 101.25) && (currentReading.getWindDirection() < 123.75)) {
-                return "East South East";
-            } else if ((currentReading.getWindDirection() >= 123.75) && (currentReading.getWindDirection() < 146.25)) {
-                return "South East";
-            } else if ((currentReading.getWindDirection() >= 146.25) && (currentReading.getWindDirection() < 168.75)) {
-                return "South South East";
-            } else if ((currentReading.getWindDirection() >= 168.75) && (currentReading.getWindDirection() < 191.25)) {
-                return "South";
-            } else if ((currentReading.getWindDirection() >= 191.25) && (currentReading.getWindDirection() < 213.75)) {
-                return "South South West";
-            } else if ((currentReading.getWindDirection() >= 213.75) && (currentReading.getWindDirection() < 236.25)) {
-                return "South West";
-            } else if ((currentReading.getWindDirection() >= 236.25) && (currentReading.getWindDirection() < 258.75)) {
-                return "West South West";
-            } else if ((currentReading.getWindDirection() >= 258.75) && (currentReading.getWindDirection() < 281.25)) {
-                return "West";
-            } else if ((currentReading.getWindDirection() >= 281.25) && (currentReading.getWindDirection() < 303.75)) {
-                return "West North West";
-            } else if ((currentReading.getWindDirection() >= 303.75) && (currentReading.getWindDirection() < 326.25)) {
-                return "North West";
-            } else if ((currentReading.getWindDirection() >= 326.25) && (currentReading.getWindDirection() < 348.75)) {
-                return "North North West";
+                windDirect = "North";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 11.25) && (station.readings[station.readings.length - 1].windDirection < 33.75)) {
+                windDirect = "North North East";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 33.75) && (station.readings[station.readings.length - 1].windDirection < 56.25)) {
+                windDirect = "North East";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 56.25) && (station.readings[station.readings.length - 1].windDirection < 78.75)) {
+                windDirect = "East North East";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 78.75) && (station.readings[station.readings.length - 1].windDirection < 101.25)) {
+                windDirect = "East";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 101.25) && (station.readings[station.readings.length - 1].windDirection < 123.75)) {
+                windDirect = "East South East";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 123.75) && (station.readings[station.readings.length - 1].windDirection < 146.25)) {
+                windDirect = "South East";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 146.25) && (station.readings[station.readings.length - 1].windDirection < 168.75)) {
+                windDirect = "South South East";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 168.75) && (station.readings[station.readings.length - 1].windDirection < 191.25)) {
+                windDirect = "South";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 191.25) && (station.readings[station.readings.length - 1].windDirection < 213.75)) {
+                windDirect = "South South West";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 213.75) && (station.readings[station.readings.length - 1].windDirection < 236.25)) {
+                windDirect = "South West";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 236.25) && (station.readings[station.readings.length - 1].windDirection < 258.75)) {
+                windDirect = "West South West";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 258.75) && (station.readings[station.readings.length - 1].windDirection < 281.25)) {
+                windDirect = "West";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 281.25) && (station.readings[station.readings.length - 1].windDirection < 303.75)) {
+                windDirect = "West North West";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 303.75) && (station.readings[station.readings.length - 1].windDirection < 326.25)) {
+                windDirect = "North West";
+            } else if ((station.readings[station.readings.length - 1].windDirection >= 326.25) && (station.readings[station.readings.length - 1].windDirection < 348.75)) {
+                windDirect = "North North West";
             } else
-                return "Even Breeze";
+                windDirect = "Even Breeze";
     } else {
-      windBeaufort = "No readings available.";
+      windDirect = "No readings available.";
     }
-    return windBeaufort;
+    return windDirect;
   },
   
   getPressureHpa(station) {
