@@ -83,21 +83,12 @@
           "pressure": 800,
           "windDirection": 12,
           "time": "2021-07-21T23:24:35.211Z"
-        },
-        {
-          "id": "1bc08190-ea7b-11eb-966e-3f54ae11c582",
-          "code": 400,
-          "temperature": 4,
-          "windSpeed": 20,
-          "pressure": 800,
-          "windDirection": 10,
-          "time": "2021-07-21T23:26:43.241Z"
         }
       ],
       "temperature": 77,
       "latest": "2021-07-22T07:37:06.500Z",
-      "weatherType": "Light Showers",
-      "latestReading": "2021-07-21T23:26:43.241Z"
+      "weatherType": "Thunder",
+      "latestReading": "2021-07-21T23:24:35.211Z"
     },
     {
       "id": "05",
