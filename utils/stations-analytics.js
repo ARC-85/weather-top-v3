@@ -81,37 +81,32 @@ const stationsAnalytics = {
   },
   
   getTemperatureTrend(station) {
-    let tempTrend = null;
+    let temperatureTrend = null;
     if (station.readings.length > 0) {
       if (station.readings.length < 1) {
-                return "No Temp Trend";
+                temperatureTrend = "No Temp Trend";
             }
             if (station.readings.length === 1) {
-                return "No Temp Trend";
+                temperatureTrend = "No Temp Trend";
             } else if (station.readings.length === 2) {
-                Reading firstReading = readings.get(readings.size() - 1);
-                Reading secondReading = readings.get(readings.size() - 2);
-                if (firstReading.getTemp() > secondReading.getTemp()) {
-                    return "Increasing Temp Trend";
+                if (station.readings[station.readings.length - 1].temperature > station.readings[station.readings.length - 2].temperature) {
+                    temperatureTrend = "Increasing Temp Trend";
                 } else {
-                    return "Decreasing Temp Trend";
+                    temperatureTrend = "Decreasing Temp Trend";
                 }
-            } else if (readings.size() >= 3) {
-                Reading firstReading = readings.get(readings.size() - 1);
-                Reading secondReading = readings.get(readings.size() - 2);
-                Reading thirdReading = readings.get(readings.size() - 3);
-                if ((firstReading.getTemp() > secondReading.getTemp()) && (secondReading.getTemp() > thirdReading.getTemp())) {
-                    return "Increasing Temp Trend";
-                } else if ((firstReading.getTemp() < secondReading.getTemp()) && (secondReading.getTemp() < thirdReading.getTemp())) {
-                    return "Decreasing Temp Trend";
+            } else if (station.readings.length >= 3) {
+                if ((station.readings[station.readings.length - 1].temperature > station.readings[station.readings.length - 2].temperature) && (station.readings[station.readings.length - 2].temperature > station.readings[station.readings.length - 3].temperature)) {
+                    temperatureTrend = "Increasing Temp Trend";
+                } else if ((station.readings[station.readings.length - 1].temperature < station.readings[station.readings.length - 2].temperature) && (station.readings[station.readings.length - 2].temperature < station.readings[station.readings.length - 3].temperature)) {
+                    temperatureTrend = "Decreasing Temp Trend";
                 } else {
-                    return "No Temp Trend";
+                    temperatureTrend = "No Temp Trend";
                 }
             }
     } else {
-      maximumTemperature = "No readings available.";
+      temperatureTrend = "No readings available.";
     }
-    return maximumTemperature;
+    return temperatureTrend;
   },
   
   getWindBeaufort(station) {

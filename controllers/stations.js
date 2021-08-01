@@ -17,6 +17,7 @@ const stations = {
     const windTemp = stationsAnalytics.getWindChill(station);
     const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
     const maximumTemperature = stationsAnalytics.getMaximumTemperature(station);
+    const temperatureTrend = stationsAnalytics.getTemperatureTrend(station);
     const windBeaufort = stationsAnalytics.getWindBeaufort(station);
     const windDirect = stationsAnalytics.getWindDirection(station);
     const minimumWind = stationsAnalytics.getMinimumWind(station);
@@ -36,6 +37,7 @@ const stations = {
       windTemp: windTemp,
       minimumTemperature: minimumTemperature,
       maximumTemperature: maximumTemperature,
+      temperatureTrend: temperatureTrend,
       windBeaufort: windBeaufort,
       windDirect: windDirect,
       minimumWind: minimumWind,
