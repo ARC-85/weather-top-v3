@@ -22,6 +22,7 @@ const stations = {
     const windDirect = stationsAnalytics.getWindDirection(station);
     const minimumWind = stationsAnalytics.getMinimumWind(station);
     const maximumWind = stationsAnalytics.getMaximumWind(station);
+    const windTrend = stationsAnalytics.getWindTrend(station);
     const pressureHpa = stationsAnalytics.getPressureHpa(station);
     const minimumPressure = stationsAnalytics.getMinimumPressure(station);
     const maximumPressure = stationsAnalytics.getMaximumPressure(station);
@@ -42,6 +43,7 @@ const stations = {
       windDirect: windDirect,
       minimumWind: minimumWind,
       maximumWind: maximumWind,
+      windTrend: windTrend,
       pressureHpa: pressureHpa,
       minimumPressure: minimumPressure,
       maximumPressure: maximumPressure,

@@ -36,19 +36,19 @@
           "id": "70728d00-f246-11eb-8e84-39e17ba23f18",
           "code": 600,
           "temperature": 2,
-          "windSpeed": 20,
+          "windSpeed": 7,
           "pressure": 1000,
           "windDirection": 0,
-          "time": "2021-07-31T21:29:51.312Z"
+          "time": "2021-08-01T19:17:18.852Z"
         },
         {
           "id": "a579ad20-f2fb-11eb-aee0-93a8184f9fde",
           "code": 500,
           "temperature": 1,
-          "windSpeed": 20,
+          "windSpeed": 6,
           "pressure": 1000,
           "windDirection": 12,
-          "time": "2021-08-01T19:06:59.186Z"
+          "time": "2021-08-01T19:17:50.126Z"
         }
       ],
       "temperature": 43,

@@ -233,6 +233,35 @@ const stationsAnalytics = {
     return maximumWind;
   },
   
+  getWindTrend(station) {
+    let windTrend = null;
+    if (station.readings.length > 0) {
+      if (station.readings.length < 1) {
+                windTrend = "No Wind Trend";
+            }
+            if (station.readings.length === 1) {
+                windTrend = "No Wind Trend";
+            } else if (station.readings.length === 2) {
+                if (station.readings[station.readings.length - 1].windSpeed > station.readings[station.readings.length - 2].windSpeed) {
+                    windTrend = "Increasing Wind Trend";
+                } else {
+                    windTrend = "Decreasing Wind Trend";
+                }
+            } else if (station.readings.length >= 3) {
+                if ((station.readings[station.readings.length - 1].windSpeed > station.readings[station.readings.length - 2].windSpeed) && (station.readings[station.readings.length - 2].windSpeed > station.readings[station.readings.length - 3].windSpeed)) {
+                    windTrend = "Increasing Wind Trend";
+                } else if ((station.readings[station.readings.length - 1].windSpeed < station.readings[station.readings.length - 2].windSpeed) && (station.readings[station.readings.length - 2].windSpeed < station.readings[station.readings.length - 3].windSpeed)) {
+                    windTrend = "Decreasing Wind Trend";
+                } else {
+                    windTrend = "No Wind Trend";
+                }
+            }
+    } else {
+      windTrend = "No readings available.";
+    }
+    return windTrend;
+  },
+  
   getPressureHpa(station) {
     let pressureHpa = null;
     if (station.readings.length > 0) {
