@@ -22,6 +22,8 @@ const stations = {
     const minimumWind = stationsAnalytics.getMinimumWind(station);
     const maximumWind = stationsAnalytics.getMaximumWind(station);
     const pressureHpa = stationsAnalytics.getPressureHpa(station);
+    const minimumPressure = stationsAnalytics.getMinimumPressure(station);
+    const maximumPressure = stationsAnalytics.getMaximumPressure(station);
     const latestReading = stationsAnalytics.getLatestReading(station);
     console.log(minimumTemperature);
     console.log(latestReading);
@@ -39,6 +41,8 @@ const stations = {
       minimumWind: minimumWind,
       maximumWind: maximumWind,
       pressureHpa: pressureHpa,
+      minimumPressure: minimumPressure,
+      maximumPressure: maximumPressure,
       latestReading: latestReading
     };
     response.render("stations", viewData);

@@ -80,6 +80,40 @@ const stationsAnalytics = {
     return maximumTemperature;
   },
   
+  getTemperatureTrend(station) {
+    let tempTrend = null;
+    if (station.readings.length > 0) {
+      if (station.readings.length < 1) {
+                return "No Temp Trend";
+            }
+            if (station.readings.length === 1) {
+                return "No Temp Trend";
+            } else if (station.readings.length === 2) {
+                Reading firstReading = readings.get(readings.size() - 1);
+                Reading secondReading = readings.get(readings.size() - 2);
+                if (firstReading.getTemp() > secondReading.getTemp()) {
+                    return "Increasing Temp Trend";
+                } else {
+                    return "Decreasing Temp Trend";
+                }
+            } else if (readings.size() >= 3) {
+                Reading firstReading = readings.get(readings.size() - 1);
+                Reading secondReading = readings.get(readings.size() - 2);
+                Reading thirdReading = readings.get(readings.size() - 3);
+                if ((firstReading.getTemp() > secondReading.getTemp()) && (secondReading.getTemp() > thirdReading.getTemp())) {
+                    return "Increasing Temp Trend";
+                } else if ((firstReading.getTemp() < secondReading.getTemp()) && (secondReading.getTemp() < thirdReading.getTemp())) {
+                    return "Decreasing Temp Trend";
+                } else {
+                    return "No Temp Trend";
+                }
+            }
+    } else {
+      maximumTemperature = "No readings available.";
+    }
+    return maximumTemperature;
+  },
+  
   getWindBeaufort(station) {
     let windBeaufort = null;
     const readings = station.readings;
@@ -212,6 +246,36 @@ const stationsAnalytics = {
       pressureHpa = "No readings available.";
     }
     return pressureHpa;
+  },
+  
+  getMinimumPressure(station) {
+    let minimumPressure = null;
+    if (station.readings.length > 0) {
+      minimumPressure = station.readings[0].pressure;
+      for (let i = 0; i < station.readings.length; i++) {
+        if (station.readings[i].pressure < minimumPressure) {
+          minimumPressure = "Min Pressure: " + station.readings[i].pressure + " hPa";
+        }
+      }
+    } else {
+      minimumPressure = "No readings available.";
+    }
+    return minimumPressure;
+  },
+  
+  getMaximumPressure(station) {
+    let maximumPressure = null;
+    if (station.readings.length > 0) {
+      maximumPressure = station.readings[0].pressure;
+      for (let i = 0; i < station.readings.length; i++) {
+        if (station.readings[i].pressure > maximumPressure) {
+          maximumPressure = "Max Pressure: " + station.readings[i].pressure + " hPa";
+        }
+      }
+    } else {
+      maximumPressure = "No readings available.";
+    }
+    return maximumPressure;
   },
 
   getLatestReading(station) {
