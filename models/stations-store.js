@@ -90,6 +90,7 @@ const stationsStore = {
     const station = this.getStation(id);
     const readings = station.readings;
     _.remove(readings, { id: readingId });
+    const latest = new Date();
     const weatherType = stationsAnalytics.getWeatherType(station);
     const celsius = stationsAnalytics.getCelsius(station);
     const fahrenheit = stationsAnalytics.getFahrenheit(station);
@@ -108,7 +109,23 @@ const stationsStore = {
     const pressureTrend = stationsAnalytics.getPressureTrend(station);
     const latestReading = stationsAnalytics.getLatestReading(station);
     station.weatherType = weatherType;
+    station.celsius = celsius;
+    station.fahrenheit = fahrenheit;
+    station.windTemp = windTemp;
+    station.minimumTemperature = minimumTemperature;
+    station.maximumTemperature = maximumTemperature;
+    station.temperatureTrend = temperatureTrend;
+    station.windBeaufort = windBeaufort;
+    station.windDirect = windDirect;
+    station.minimumWind = minimumWind;
+    station.maximumWind = maximumWind;
+    station.windTrend = windTrend;
+    station.pressureHpa = pressureHpa;
+    station.minimumPressure = minimumPressure;
+    station.maximumPressure = maximumPressure;
+    station.pressureTrend = pressureTrend;
     station.latestReading = latestReading;
+    station.latest = latest;
     this.store.save();
   },
 
