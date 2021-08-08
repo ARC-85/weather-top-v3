@@ -11,7 +11,7 @@ const dashboard = {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);
     const stations = stationsStore.getUserStations(loggedInUser.id);
-    stations.sort();
+    stations.sort((a, b) => (a.name > b.name) ? 1 : -1);
     const viewData = {
       title: "Stations Dashboard",
       stations: stationsStore.getUserStations(loggedInUser.id),

@@ -133,12 +133,40 @@
       "name": "Moycullen",
       "latitude": 52.149,
       "longitude": -6.994,
-      "readings": []
+      "readings": [
+        {
+          "id": "cfcc41d0-f889-11eb-9960-2bd0951d8b2b",
+          "code": 800,
+          "temperature": 4,
+          "windSpeed": 20,
+          "pressure": 800,
+          "windDirection": 300,
+          "time": "2021-08-08T20:47:14.541Z"
+        }
+      ],
+      "weatherType": "Thunder",
+      "celsius": "4 Celsius",
+      "fahrenheit": "39.2 Fahrenheit",
+      "windTemp": "Feels like -2.26 Celsius",
+      "minimumTemperature": 4,
+      "maximumTemperature": 4,
+      "temperatureTrend": "No Temp Trend",
+      "windBeaufort": "Beaufort 4 (Moderate Breeze)",
+      "windDirect": "West North West",
+      "minimumWind": 20,
+      "maximumWind": 20,
+      "windTrend": "No Wind Trend",
+      "pressureHpa": "800 hPa",
+      "minimumPressure": 800,
+      "maximumPressure": 800,
+      "pressureTrend": "No Pressure Trend",
+      "latestReading": "2021-08-08T20:47:14.541Z",
+      "latest": "2021-08-08T20:47:14.541Z"
     },
     {
-      "id": "98edc530-f87a-11eb-9e6a-d943c17ccc5c",
+      "id": "b09f25c0-f889-11eb-9960-2bd0951d8b2b",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Coycullen",
+      "name": "NUI Galway",
       "latitude": 52.3,
       "longitude": -6.5,
       "readings": []
