@@ -301,6 +301,35 @@ const stationsAnalytics = {
     }
     return maximumPressure;
   },
+  
+  getPressureTrend(station) {
+    let pressureTrend = null;
+    if (station.readings.length > 0) {
+      if (station.readings.length < 1) {
+                pressureTrend = "No Pressure Trend";
+            }
+            if (station.readings.length === 1) {
+                pressureTrend = "No Pressure Trend";
+            } else if (station.readings.length === 2) {
+                if (station.readings[station.readings.length - 1].pressure > station.readings[station.readings.length - 2].pressure) {
+                    pressureTrend = "Increasing Pressure Trend";
+                } else {
+                    pressureTrend = "Decreasing Pressure Trend";
+                }
+            } else if (station.readings.length >= 3) {
+                if ((station.readings[station.readings.length - 1].pressure > station.readings[station.readings.length - 2].pressure) && (station.readings[station.readings.length - 2].pressure > station.readings[station.readings.length - 3].pressure)) {
+                    pressureTrend = "Increasing Pressure Trend";
+                } else if ((station.readings[station.readings.length - 1].pressure < station.readings[station.readings.length - 2].pressure) && (station.readings[station.readings.length - 2].pressure < station.readings[station.readings.length - 3].pressure)) {
+                    pressureTrend = "Decreasing Pressure Trend";
+                } else {
+                    pressureTrend = "No Pressure Trend";
+                }
+            }
+    } else {
+      pressureTrend = "No readings available.";
+    }
+    return pressureTrend;
+  },
 
   getLatestReading(station) {
     let latestReading = null;
