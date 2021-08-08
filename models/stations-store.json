@@ -134,14 +134,6 @@
       "latitude": 52.149,
       "longitude": -6.994,
       "readings": []
-    },
-    {
-      "id": "a1c467b0-f869-11eb-9343-3f9e27617bad",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Cartoor",
-      "latitude": 52.3,
-      "longitude": -6.5,
-      "readings": []
     }
   ]
 }
