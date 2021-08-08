@@ -25,8 +25,7 @@
             <h3>{{minimumTemperature}}</h3>
             <h3>{{maximumTemperature}}</h3>
             <h3>{{temperatureTrend}}</h3>
-            <img class="ui tiny centered image" src="/public/images/trends/${station.trendTemp()}.png" }>
-            <h5 class="ui center aligned header">{{trendTemperature}}</h5>
+            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/trends/{{temperatureTrend}}.png">
         </div>
         <div class="column">
             <img class="ui small centered image" src="https://weather-top-v2.glitch.me/images/wind.png">
@@ -35,12 +34,12 @@
             </h1>
             <h3>{{windBeaufort}}</h3>
             <h3>{{windDirect}}</h3>
+            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/direction/{{windDirect}}.png">
             <h3>{{windTemp}}</h3>
             <h3>{{minimumWind}}</h3>
             <h3>{{maximumWind}}</h3>
-            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/trends/{{pressureTrend}}.png">
             <h3>{{windTrend}}</h3>
-            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/direction/{{windDirect}}.png" }>
+            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/trends/{{windTrend}}.png">
         </div>
         <div class="column">
             <img class="ui small centered image" src="https://weather-top-v2.glitch.me/images/pressure.png">
@@ -50,8 +49,8 @@
             <h3>{{pressureHpa}}</h3>
             <h3>{{minimumPressure}}</h3>
             <h3>{{maximumPressure}}</h3>
-            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/trends/{{pressureTrend}}.png">
             <h3>{{pressureTrend}}</h3>
+            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/trends/{{pressureTrend}}.png">
         </div>
     </div>
 </section>
