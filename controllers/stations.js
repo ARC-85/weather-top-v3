@@ -68,7 +68,7 @@ const stations = {
     const newReading = {
       id: uuid.v1(),
       code: Number(request.body.code),
-      temperature: request.body.temperature,
+      temperature: parseFloat(request.body.temperature),
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
       windDirection: Number(request.body.windDirection),

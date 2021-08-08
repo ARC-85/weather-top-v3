@@ -58,12 +58,57 @@
           "pressure": 700,
           "windDirection": 50,
           "time": "2021-08-08T15:43:12.963Z"
+        },
+        {
+          "id": "85ec51c0-f863-11eb-8d66-9fdb156326cc",
+          "code": 0,
+          "temperature": 7.2,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "time": "2021-08-08T16:13:09.735Z"
+        },
+        {
+          "id": "ada785e0-f863-11eb-8d66-9fdb156326cc",
+          "code": 0,
+          "temperature": 32,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "time": "2021-08-08T16:14:16.382Z"
+        },
+        {
+          "id": "adad2b30-f863-11eb-8d66-9fdb156326cc",
+          "code": 0,
+          "temperature": 32,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "time": "2021-08-08T16:14:16.419Z"
+        },
+        {
+          "id": "b4b4ca50-f863-11eb-8d66-9fdb156326cc",
+          "code": 0,
+          "temperature": -4,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "time": "2021-08-08T16:14:28.213Z"
+        },
+        {
+          "id": "5aceea60-f864-11eb-8d66-9fdb156326cc",
+          "code": 0,
+          "temperature": -4,
+          "windSpeed": 0,
+          "pressure": 0,
+          "windDirection": 0,
+          "time": "2021-08-08T16:19:06.886Z"
         }
       ],
-      "temperature": 78,
-      "latest": "2021-08-08T15:43:12.964Z",
-      "weatherType": "Light Showers",
-      "latestReading": "2021-08-08T15:43:12.963Z"
+      "temperature": null,
+      "latest": "2021-08-08T16:21:17.413Z",
+      "weatherType": "Unrecognised code",
+      "latestReading": "2021-08-08T16:19:06.886Z"
     },
     {
       "id": "05",
