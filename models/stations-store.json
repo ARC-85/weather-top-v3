@@ -60,12 +60,36 @@
           "pressure": 700,
           "windDirection": 50,
           "time": "2021-08-08T15:43:12.963Z"
+        },
+        {
+          "id": "b5bc0680-f876-11eb-a0eb-c1368fa4eb58",
+          "code": 500,
+          "temperature": 4,
+          "windSpeed": 20,
+          "pressure": 800,
+          "windDirection": 300,
+          "time": "2021-08-08T18:30:30.376Z"
         }
       ],
       "temperature": 78,
-      "latest": "2021-08-08T15:43:12.964Z",
-      "weatherType": "Light Showers",
-      "latestReading": "2021-08-08T15:43:12.963Z"
+      "latest": "2021-08-08T18:30:30.376Z",
+      "weatherType": "Heavy Showers",
+      "latestReading": "2021-08-08T18:30:30.376Z",
+      "celsius": "4 Celsius",
+      "fahrenheit": "39.2 Fahrenheit",
+      "windTemp": "Feels like -2.26 Celsius",
+      "minimumTemperature": "Min Temp: 2 Celsius",
+      "maximumTemperature": "Max Temp: 32 Celsius",
+      "temperatureTrend": "No Temp Trend",
+      "windBeaufort": "Beaufort 4 (Moderate Breeze)",
+      "windDirect": "West North West",
+      "minimumWind": "Min Wind: 3 km/hr",
+      "maximumWind": "Max Wind: 20 km/hr",
+      "windTrend": "No Wind Trend",
+      "pressureHpa": "800 hPa",
+      "minimumPressure": "Min Pressure: 700 hPa",
+      "maximumPressure": "Max Pressure: 1000 hPa",
+      "pressureTrend": "No Pressure Trend"
     },
     {
       "id": "05",

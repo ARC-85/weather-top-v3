@@ -43,6 +43,21 @@ const stationsStore = {
     station.readings.push(reading);
     const latest = new Date();
     const weatherType = stationsAnalytics.getWeatherType(station);
+    const celsius = stationsAnalytics.getCelsius(station);
+    const fahrenheit = stationsAnalytics.getFahrenheit(station);
+    const windTemp = stationsAnalytics.getWindChill(station);
+    const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
+    const maximumTemperature = stationsAnalytics.getMaximumTemperature(station);
+    const temperatureTrend = stationsAnalytics.getTemperatureTrend(station);
+    const windBeaufort = stationsAnalytics.getWindBeaufort(station);
+    const windDirect = stationsAnalytics.getWindDirection(station);
+    const minimumWind = stationsAnalytics.getMinimumWind(station);
+    const maximumWind = stationsAnalytics.getMaximumWind(station);
+    const windTrend = stationsAnalytics.getWindTrend(station);
+    const pressureHpa = stationsAnalytics.getPressureHpa(station);
+    const minimumPressure = stationsAnalytics.getMinimumPressure(station);
+    const maximumPressure = stationsAnalytics.getMaximumPressure(station);
+    const pressureTrend = stationsAnalytics.getPressureTrend(station);
     const latestReading = stationsAnalytics.getLatestReading(station);
 
     let temperature = 0;
@@ -51,8 +66,22 @@ const stationsStore = {
     }
 
     station.weatherType = weatherType;
+    station.celsius = celsius;
+    station.fahrenheit = fahrenheit;
+    station.windTemp = windTemp;
+    station.minimumTemperature = minimumTemperature;
+    station.maximumTemperature = maximumTemperature;
+    station.temperatureTrend = temperatureTrend;
+    station.windBeaufort = windBeaufort;
+    station.windDirect = windDirect;
+    station.minimumWind = minimumWind;
+    station.maximumWind = maximumWind;
+    station.windTrend = windTrend;
+    station.pressureHpa = pressureHpa;
+    station.minimumPressure = minimumPressure;
+    station.maximumPressure = maximumPressure;
+    station.pressureTrend = pressureTrend;
     station.latestReading = latestReading;
-    station.temperature = temperature;
     station.latest = latest;
     this.store.save();
   },
@@ -62,6 +91,21 @@ const stationsStore = {
     const readings = station.readings;
     _.remove(readings, { id: readingId });
     const weatherType = stationsAnalytics.getWeatherType(station);
+    const celsius = stationsAnalytics.getCelsius(station);
+    const fahrenheit = stationsAnalytics.getFahrenheit(station);
+    const windTemp = stationsAnalytics.getWindChill(station);
+    const minimumTemperature = stationsAnalytics.getMinimumTemperature(station);
+    const maximumTemperature = stationsAnalytics.getMaximumTemperature(station);
+    const temperatureTrend = stationsAnalytics.getTemperatureTrend(station);
+    const windBeaufort = stationsAnalytics.getWindBeaufort(station);
+    const windDirect = stationsAnalytics.getWindDirection(station);
+    const minimumWind = stationsAnalytics.getMinimumWind(station);
+    const maximumWind = stationsAnalytics.getMaximumWind(station);
+    const windTrend = stationsAnalytics.getWindTrend(station);
+    const pressureHpa = stationsAnalytics.getPressureHpa(station);
+    const minimumPressure = stationsAnalytics.getMinimumPressure(station);
+    const maximumPressure = stationsAnalytics.getMaximumPressure(station);
+    const pressureTrend = stationsAnalytics.getPressureTrend(station);
     const latestReading = stationsAnalytics.getLatestReading(station);
     station.weatherType = weatherType;
     station.latestReading = latestReading;
