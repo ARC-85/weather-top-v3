@@ -4,6 +4,8 @@
       "id": "01",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Tramore",
+      "latitude": 52.160,
+      "longitude": -7.152,
       "readings": [
         {
           "id": "c8c8e8c0-f244-11eb-bffc-4b0a2167c5ab",
@@ -58,107 +60,19 @@
           "pressure": 700,
           "windDirection": 50,
           "time": "2021-08-08T15:43:12.963Z"
-        },
-        {
-          "id": "85ec51c0-f863-11eb-8d66-9fdb156326cc",
-          "code": 0,
-          "temperature": 7.2,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:13:09.735Z"
-        },
-        {
-          "id": "ada785e0-f863-11eb-8d66-9fdb156326cc",
-          "code": 0,
-          "temperature": 32,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:14:16.382Z"
-        },
-        {
-          "id": "adad2b30-f863-11eb-8d66-9fdb156326cc",
-          "code": 0,
-          "temperature": 32,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:14:16.419Z"
-        },
-        {
-          "id": "b4b4ca50-f863-11eb-8d66-9fdb156326cc",
-          "code": 0,
-          "temperature": -4,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:14:28.213Z"
-        },
-        {
-          "id": "5aceea60-f864-11eb-8d66-9fdb156326cc",
-          "code": 0,
-          "temperature": -4,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:19:06.886Z"
-        },
-        {
-          "id": "73000aa0-f865-11eb-9025-cbdfc144edae",
-          "code": 0,
-          "temperature": 4,
-          "windSpeed": null,
-          "pressure": null,
-          "windDirection": null,
-          "time": "2021-08-08T16:26:56.971Z"
-        },
-        {
-          "id": "7463b950-f865-11eb-9025-cbdfc144edae",
-          "code": 0,
-          "temperature": 4,
-          "windSpeed": null,
-          "pressure": null,
-          "windDirection": null,
-          "time": "2021-08-08T16:26:59.301Z"
-        },
-        {
-          "id": "a93a55d0-f865-11eb-a1a6-ad56b2fc9d59",
-          "code": 0,
-          "temperature": -4,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:28:27.950Z"
-        },
-        {
-          "id": "b2cdcff0-f865-11eb-a1a6-ad56b2fc9d59",
-          "code": 0,
-          "temperature": 7.2,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:28:44.015Z"
-        },
-        {
-          "id": "c7ad97c0-f865-11eb-a1a6-ad56b2fc9d59",
-          "code": 0,
-          "temperature": 0,
-          "windSpeed": 0,
-          "pressure": 0,
-          "windDirection": 0,
-          "time": "2021-08-08T16:29:19.036Z"
         }
       ],
-      "temperature": 152.39999999999998,
-      "latest": "2021-08-08T16:29:19.037Z",
-      "weatherType": "Unrecognised code",
-      "latestReading": "2021-08-08T16:29:19.036Z"
+      "temperature": 78,
+      "latest": "2021-08-08T15:43:12.964Z",
+      "weatherType": "Light Showers",
+      "latestReading": "2021-08-08T15:43:12.963Z"
     },
     {
       "id": "05",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Dunmore",
+      "latitude": 52.149,
+      "longitude": -6.994,
       "readings": [
         {
           "id": "06",
@@ -182,6 +96,8 @@
       "id": "199dac00-e993-11eb-a258-89869f2945a4",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Moycullen",
+      "latitude": 52.149,
+      "longitude": -6.994,
       "readings": []
     }
   ]
