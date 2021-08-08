@@ -134,6 +134,14 @@
       "latitude": 52.149,
       "longitude": -6.994,
       "readings": []
+    },
+    {
+      "id": "98edc530-f87a-11eb-9e6a-d943c17ccc5c",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Coycullen",
+      "latitude": 52.3,
+      "longitude": -6.5,
+      "readings": []
     }
   ]
 }
