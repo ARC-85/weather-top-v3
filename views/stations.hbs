@@ -8,7 +8,7 @@
             </h1>
         </div>
         <div class="column">
-            <img class="ui small centered image">
+            <img class="ui small centered image" src="https://weather-top-v2.glitch.me/images/weather.png">
             <h1 class="ui purple header">
                 Weather
             </h1>
@@ -16,7 +16,7 @@
             <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/weather/{{weatherType}}.png" }>
         </div>
         <div class="column">
-            <img class="ui small centered image">
+            <img class="ui small centered image" src="https://weather-top-v2.glitch.me/images/temperature.png">
             <h1 class="ui blue header">
                 Temperature
             </h1>
@@ -29,7 +29,7 @@
             <h5 class="ui center aligned header">{{trendTemperature}}</h5>
         </div>
         <div class="column">
-            <img class="ui small centered image" src="/public/images/wind.png">
+            <img class="ui small centered image" src="https://weather-top-v2.glitch.me/images/wind.png">
             <h1 class="ui red header">
                 Wind
             </h1>
@@ -38,22 +38,20 @@
             <h3>{{windTemp}}</h3>
             <h3>{{minimumWind}}</h3>
             <h3>{{maximumWind}}</h3>
+            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/trends/{{pressureTrend}}.png">
             <h3>{{windTrend}}</h3>
             <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/direction/{{windDirect}}.png" }>
-            <img class="ui tiny centered image" src="/public/images/trends/${station.trendWind()}.png" }>
-            <h5 class="ui center aligned header">{{trendWind}}</h5>
         </div>
         <div class="column">
-            <img class="ui small centered image" src="/public/images/pressure.png">
+            <img class="ui small centered image" src="https://weather-top-v2.glitch.me/images/pressure.png">
             <h1 class="ui pink header">
                 Pressure
             </h1>
             <h3>{{pressureHpa}}</h3>
             <h3>{{minimumPressure}}</h3>
             <h3>{{maximumPressure}}</h3>
+            <img class="ui tiny centered image" src="https://weather-top-v2.glitch.me/images/trends/{{pressureTrend}}.png">
             <h3>{{pressureTrend}}</h3>
-            <img class="ui tiny centered image" src="/public/images/trends/${station.trendPressure()}.png" }>
-            <h5 class="ui center aligned header">{{trendPressure}}</h5>
         </div>
     </div>
 </section>
