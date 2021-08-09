@@ -6,6 +6,7 @@ const uuid = require("uuid");
 
 const accounts = {
   index(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
       title: "Login or Signup"
     };
