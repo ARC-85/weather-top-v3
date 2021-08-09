@@ -9,7 +9,7 @@ const accounts = {
     const viewData = {
       title: "Login or Signup"
     };
-    response.render("index", viewData);
+    response.render("profile", viewData);
   },
 
   login(request, response) {
