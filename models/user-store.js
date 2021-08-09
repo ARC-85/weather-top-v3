@@ -24,8 +24,8 @@ const userStore = {
     return this.store.findOneBy(this.collection, { email: email });
   },
   
-  updateFirstName(loggedInUser, newFirstName) {
-    loggedInUser.firstName = newFirstName.firstName;
+  updateFirstName(user, firstName) {
+    user.firstName = firstName.firstName;
     this.store.save();
   },
 };

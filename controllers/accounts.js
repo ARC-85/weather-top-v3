@@ -70,12 +70,12 @@ const accounts = {
   },
   
   updateFirstName(request, response) {
-    const loggedInUser = accounts.getCurrentUser(request);
+    const user = accounts.getCurrentUser(request);
     const firstName = {
       firstName: request.body.firstName,
     };
-    logger.debug(`Updating First Name ${loggedInUser}`);
-    userstore.updateFirstName(loggedInUser, newFirstName);
+    logger.debug(`Updating First Name ${user}`);
+    userstore.updateFirstName(user, firstName);
     response.redirect("/profile");
   }
 };

@@ -170,6 +170,14 @@
       "latitude": 52.3,
       "longitude": -6.5,
       "readings": []
+    },
+    {
+      "id": "91cdedd0-f964-11eb-bbf8-c35279491f93",
+      "userid": "f9cfda10-f95f-11eb-a680-67590f62cae2",
+      "name": "",
+      "latitude": 0,
+      "longitude": 0,
+      "readings": []
     }
   ]
 }

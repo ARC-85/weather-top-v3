@@ -19,9 +19,9 @@
                         <h2>First Name: </h2>  <h4>{{firstName}}</h4>
                     </td>
                     <td>
-                        <form class="ui stacked segment form" action="/profile/updatefirstname/{{user.id}}" method="POST">
+                        <form class="ui stacked segment form" action="/profile/updatefirstname" method="POST">
                             <div class="field">
-                                <input placeholder="First Name" type="text" name="firstname" value="{{user.firstName}}">
+                                <input placeholder="First Name" type="text" name="firstname">
                             </div>
                             <button class="ui blue submit button">Update First Name</button>
                         </form>
