@@ -7,16 +7,16 @@ const uuid = require("uuid");
 const accounts = {
   index(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    const firstName = loggedInUser.firstName;
-    const lastName = loggedInUser.lastName;
-    const email = loggedInUser.email;
-    const password = loggedInUser.password;
+    //const firstName = loggedInUser.firstName;
+    //const lastName = loggedInUser.lastName;
+    //const email = loggedInUser.email;
+   // const password = loggedInUser.password;
     const viewData = {
       title: "Login or Signup",
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password
+      //firstName: firstName,
+      //lastName: lastName,
+      //email: email,
+      //password: password
     };
     response.render("profile", viewData);
   },
