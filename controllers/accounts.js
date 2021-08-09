@@ -70,7 +70,7 @@ const accounts = {
   },
   
   updateFirstName(request, response) {
-    const userId = request.params.userid;
+    const userId = accounts.getCurrentUser(request);
     const updatedFirstName = {
       firstName: request.body.firstName,
     };
