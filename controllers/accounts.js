@@ -41,13 +41,18 @@ const accounts = {
   },
 
   register(request, response) {
-    const user = request.body;
-    user.id = uuid.v1();
+    const user = {
+      firstName: request.body.firstName,
+      lastName: request.body.lastName,
+      email: request.body.email,
+      password: request.body.email,
+      id: uuid.v1()
+      };
     userstore.addUser(user);
     logger.info(`registering ${user.email}`);
     response.redirect("/");
   },
-
+  
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
     if (user) {

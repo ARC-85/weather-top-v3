@@ -19,6 +19,13 @@
       "email": "andrewrosscameron@gmail.com",
       "password": "pass",
       "id": "b301ce40-e7bc-11eb-b9dc-fd7466059b6b"
+    },
+    {
+      "firstName": "Mr",
+      "lastName": "Cameron",
+      "email": "mr@gmail.com",
+      "password": "mr@gmail.com",
+      "id": "f9cfda10-f95f-11eb-a680-67590f62cae2"
     }
   ]
 }
