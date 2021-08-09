@@ -9,6 +9,7 @@ const about = require("./controllers/about.js");
 const stations = require("./controllers/stations.js");
 const readings = require("./controllers/readings.js");
 
+router.get("/", accounts.index);
 router.get("/profile", accounts.index);
 router.get("/login", accounts.login);
 router.get("/signup", accounts.signup);
