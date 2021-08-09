@@ -29,7 +29,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h2>Last Name: </h2> <h4>${member.lastname}</h4>
+                        <h2>Last Name: </h2> <h4>{{lastName}}</h4>
                     </td>
                     <td>
                         <form class="ui stacked segment form" action="/profile/updatelastname" method="POST">
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h2>Email:</h2>  <h4>${member.email}</h4>
+                        <h2>Email:</h2>  <h4>{{email}}</h4>
                     </td>
                     <td>
                         <form class="ui stacked segment form" action="/profile/updateemail" method="POST">
@@ -55,7 +55,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h2>Password:</h2>  <h4> *****</h4>
+                        <h2>Password:</h2>  <h4>{{password}}</h4>
                     </td>
                     <td>
                         <form class="ui stacked segment form" action="/profile/updatepassword" method="POST">

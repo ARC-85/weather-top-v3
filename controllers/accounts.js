@@ -15,7 +15,7 @@ const accounts = {
       title: "Login or Signup",
       firstName: firstName,
       lastName: lastName,
-      email: email
+      email: email,
       password: password
     };
     response.render("profile", viewData);
