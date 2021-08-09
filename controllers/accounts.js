@@ -7,8 +7,10 @@ const uuid = require("uuid");
 const accounts = {
   index(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
+    const firstName = loggedInUser.firstName;
     const viewData = {
-      title: "Login or Signup"
+      title: "Login or Signup",
+      firstName: firstName
     };
     response.render("profile", viewData);
   },
