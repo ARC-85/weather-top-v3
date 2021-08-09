@@ -28,6 +28,10 @@ const userStore = {
     user.firstName = firstName.firstName;
     this.store.save();
   },
+  
+  setFirstName(firstName) {
+    this.firstName = firstName;
+  },
 };
 
 module.exports = userStore;
