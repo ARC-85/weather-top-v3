@@ -61,11 +61,7 @@ const accounts = {
 
   getCurrentUser(request) {
     const userEmail = request.cookies.stations;
-    if(userEmail) {
     return userstore.getUserByEmail(userEmail);
-    } else {
-      return null;
-    }
   },
   
   updateFirstName(request, response) {
