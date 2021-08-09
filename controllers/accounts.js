@@ -71,7 +71,7 @@ const accounts = {
   
   updateFirstName(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    const newFirstName = {
+    const firstName = {
       firstName: request.body.firstName,
     };
     logger.debug(`Updating First Name ${loggedInUser}`);
