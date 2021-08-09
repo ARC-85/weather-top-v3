@@ -62,6 +62,15 @@ const accounts = {
   getCurrentUser(request) {
     const userEmail = request.cookies.stations;
     return userstore.getUserByEmail(userEmail);
+  },
+  
+  updateFirstName(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
+    const newFirstName = {
+      firstName: request.body.firstName,
+    };
+    logger.debug(`Updating First Name ${loggedInUser}`);
+    response.redirect("/profile");
   }
 };
 
