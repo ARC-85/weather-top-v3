@@ -9,14 +9,14 @@ const about = require("./controllers/about.js");
 const stations = require("./controllers/stations.js");
 const readings = require("./controllers/readings.js");
 
+router.get("/", accounts.index);
 router.get("/profile", accounts.index);
 router.get("/login", accounts.login);
 router.get("/signup", accounts.signup);
 router.get("/logout", accounts.logout);
 router.post("/register", accounts.register);
 router.post("/authenticate", accounts.authenticate);
-router.get("/profile/:id/editreading/:readingid", accounts.index);
-router.post("/profile/:id/updatereading/:readingid", accounts.updateFirstName);
+router.post("/profile/updatefirstname", accounts.updateFirstName);
 
 router.get("/dashboard", dashboard.index);
 router.get("/dashboard/deletestation/:id", dashboard.deleteStation);
