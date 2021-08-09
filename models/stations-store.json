@@ -83,11 +83,11 @@
         {
           "id": "07",
           "code": 200,
-          "temperature": 6,
+          "temperature": 8,
           "windSpeed": 3.5,
           "pressure": 1000,
           "windDirection": 102,
-          "time": "2021-08-08T18:42:08.035Z"
+          "time": "2021-08-09T21:56:53.030Z"
         },
         {
           "id": "48204350-f878-11eb-936f-09e82bec0354",

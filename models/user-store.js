@@ -22,7 +22,12 @@ const userStore = {
 
   getUserByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email });
-  }
+  },
+  
+  updateFirstName(loggedInUser, newFirstName) {
+    loggedInUser.firstName = newFirstName.firstName;
+    this.store.save();
+  },
 };
 
 module.exports = userStore;

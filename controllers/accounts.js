@@ -70,7 +70,7 @@ const accounts = {
       firstName: request.body.firstName,
     };
     logger.debug(`Updating First Name ${loggedInUser}`);
-    stationsStore.updateReading(reading, newReading);
+    userstore.updateFirstName(loggedInUser, newFirstName);
     response.redirect("/profile");
   }
 };
