@@ -177,7 +177,35 @@
       "name": "",
       "latitude": 0,
       "longitude": 0,
-      "readings": []
+      "readings": [
+        {
+          "id": "4c9bb1e0-fbb0-11eb-819b-2d59a37f6f6a",
+          "code": 500,
+          "temperature": 4,
+          "windSpeed": 4.2,
+          "pressure": 800,
+          "windDirection": 349,
+          "time": "2021-08-12T21:00:18.302Z"
+        }
+      ],
+      "weatherType": "Heavy Showers",
+      "celsius": "4 Celsius",
+      "fahrenheit": "39.2 Fahrenheit",
+      "windTemp": "Feels like 1.80 Celsius",
+      "minimumTemperature": 4,
+      "maximumTemperature": 4,
+      "temperatureTrend": "No Temp Trend",
+      "windBeaufort": "Beaufort 1 (Light Air)",
+      "windDirect": "North",
+      "minimumWind": 4.2,
+      "maximumWind": 4.2,
+      "windTrend": "No Wind Trend",
+      "pressureHpa": "800 hPa",
+      "minimumPressure": 800,
+      "maximumPressure": 800,
+      "pressureTrend": "No Pressure Trend",
+      "latestReading": "2021-08-12T21:00:18.302Z",
+      "latest": "2021-08-12T21:00:18.303Z"
     }
   ]
 }

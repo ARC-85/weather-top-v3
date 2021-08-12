@@ -96,7 +96,7 @@ const accounts = {
     };
     logger.debug(`Updating Email ${userId}`);
     userstore.updateEmail(userId, updatedEmail);
-    response.redirect("/profile");
+    response.redirect("/login");
   },
   
   updatePassword(request, response) {
