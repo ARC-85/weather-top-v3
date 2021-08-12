@@ -77,7 +77,37 @@ const accounts = {
     logger.debug(`Updating First Name ${userId}`);
     userstore.updateFirstName(userId, updatedFirstName);
     response.redirect("/profile");
-  }
+  },
+  
+  updateLastName(request, response) {
+    const userId = accounts.getCurrentUser(request);
+    const updatedLastName = {
+      lastName: request.body.lastName,
+    };
+    logger.debug(`Updating Last Name ${userId}`);
+    userstore.updateLastName(userId, updatedLastName);
+    response.redirect("/profile");
+  },
+  
+  updateEmail(request, response) {
+    const userId = accounts.getCurrentUser(request);
+    const updatedEmail = {
+      email: request.body.email,
+    };
+    logger.debug(`Updating Email ${userId}`);
+    userstore.updateEmail(userId, updatedEmail);
+    response.redirect("/profile");
+  },
+  
+  updatePassword(request, response) {
+    const userId = accounts.getCurrentUser(request);
+    const updatedPassword = {
+      password: request.body.password,
+    };
+    logger.debug(`Updating Password ${userId}`);
+    userstore.updatePassword(userId, updatedPassword);
+    response.redirect("/profile");
+  },
 };
 
 module.exports = accounts;

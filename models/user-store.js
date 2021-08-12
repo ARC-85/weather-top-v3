@@ -29,8 +29,19 @@ const userStore = {
     this.store.save();
   },
   
-  setFirstName(firstName) {
-    this.firstName = firstName;
+  updateLastName(userId, updatedLastName) {
+    userId.lastName = updatedLastName.lastName;
+    this.store.save();
+  },
+  
+  updateEmail(userId, updatedEmail) {
+    userId.email = updatedEmail.email;
+    this.store.save();
+  },
+  
+  updatePassword(userId, updatedPassword) {
+    userId.password = updatedPassword.password;
+    this.store.save();
   },
 };
 

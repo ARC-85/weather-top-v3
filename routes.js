@@ -18,6 +18,9 @@ router.get("/logout", accounts.logout);
 router.post("/register", accounts.register);
 router.post("/authenticate", accounts.authenticate);
 router.post("/profile/updatefirstname", accounts.updateFirstName);
+router.post("/profile/updatelastname", accounts.updateLastName);
+router.post("/profile/updateemail", accounts.updateFirstName);
+router.post("/profile/updatefirstname", accounts.updateFirstName);
 
 router.get("/dashboard", dashboard.index);
 router.get("/dashboard/deletestation/:id", dashboard.deleteStation);
