@@ -15,44 +15,6 @@ const stationsStore = {
   },
 
   getStation(id) {
-    const latest = new Date();
-    const weatherType = stationsAnalytics.getWeatherType(id);
-    const celsius = stationsAnalytics.getCelsius(id);
-    const fahrenheit = stationsAnalytics.getFahrenheit(id);
-    const windTemp = stationsAnalytics.getWindChill(id);
-    const minimumTemperature = stationsAnalytics.getMinimumTemperature(id);
-    const maximumTemperature = stationsAnalytics.getMaximumTemperature(id);
-    const temperatureTrend = stationsAnalytics.getTemperatureTrend(id);
-    const windBeaufort = stationsAnalytics.getWindBeaufort(id);
-    const windDirect = stationsAnalytics.getWindDirection(id);
-    const minimumWind = stationsAnalytics.getMinimumWind(id);
-    const maximumWind = stationsAnalytics.getMaximumWind(id);
-    const windTrend = stationsAnalytics.getWindTrend(id);
-    const pressureHpa = stationsAnalytics.getPressureHpa(id);
-    const minimumPressure = stationsAnalytics.getMinimumPressure(id);
-    const maximumPressure = stationsAnalytics.getMaximumPressure(id);
-    const pressureTrend = stationsAnalytics.getPressureTrend(id);
-    const latestReading = stationsAnalytics.getLatestReading(id);
-
-
-    station.weatherType = weatherType;
-    station.celsius = celsius;
-    station.fahrenheit = fahrenheit;
-    station.windTemp = windTemp;
-    station.minimumTemperature = minimumTemperature;
-    station.maximumTemperature = maximumTemperature;
-    station.temperatureTrend = temperatureTrend;
-    station.windBeaufort = windBeaufort;
-    station.windDirect = windDirect;
-    station.minimumWind = minimumWind;
-    station.maximumWind = maximumWind;
-    station.windTrend = windTrend;
-    station.pressureHpa = pressureHpa;
-    station.minimumPressure = minimumPressure;
-    station.maximumPressure = maximumPressure;
-    station.pressureTrend = pressureTrend;
-    station.latestReading = latestReading;
-    station.latest = latest;
     return this.store.findOneBy(this.collection, { id: id });
   },
 
