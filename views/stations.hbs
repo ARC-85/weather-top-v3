@@ -61,11 +61,12 @@
     </div>
 </section>
 
+<section>
 <div class="ui segment" id="chart"></div>
 <script>
   const data = {
     labels: [
-      {{#each reading.trendLabels}}
+      {{#each reading.trendLabelsTemp}}
         "{{this}}",
       {{/each}}
     ],
@@ -82,13 +83,83 @@
   }
 
   const chart = new frappe.Chart("#chart", {
-    title: "Temperature Trend",
+    title: "Temperature Trend (Celsius)",
     data: data,
     type: 'line',
     height: 250,
   })
+    
 </script>
+</section>
 
+<section>
+<div class="ui segment" id="chart1"></div>
+<script>
+  
+  const data1 = {
+    labels: [
+      {{#each reading.trendLabelsWind}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Wind", type: "bar",
+        values: [
+          {{#each reading.windyTrend}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  }
+  
+  const chart1 = new frappe.Chart("#chart1", {
+    title: "Wind Trend (km/hr)",
+    data: data1,
+    type: 'bar',
+    height: 250,
+  })
+  
+  
+</script>
+</section>
+
+<section>
+<div class="ui segment" id="chart2"></div>
+<script>
+  
+  const data2 = {
+    labels: [
+      {{#each reading.trendLabelsPress}}
+        "{{this}}",
+      {{/each}}
+    ],
+    datasets: [
+      {
+        name: "Pressure", type: "bar",
+        values: [
+          {{#each reading.pressTrend}}
+            {{this}},
+          {{/each}}
+        ]
+      }
+    ]
+  }
+  
+  const chart2 = new frappe.Chart("#chart2", {
+    title: "Pressure Trend (Pa)",
+    data: data2,
+    type: 'bar',
+    height: 250,
+  })
+  
+  
+</script>
+</section>
+
+
+  
 <section class="ui inverted blue segment">
   <h2 class="ui header">
     {{station.name}}

@@ -49,7 +49,7 @@ const accounts = {
       id: uuid.v1()
       };
     userstore.addUser(user);
-    logger.info(`registering ${user.email}`);
+    //logger.info(`registering ${user.email}`);
     response.redirect("/");
   },
   
@@ -57,7 +57,7 @@ const accounts = {
     const user = userstore.getUserByEmail(request.body.email);
     if (user) {
       response.cookie("stations", user.email);
-      logger.info(`logging in ${user.email}`);
+      //logger.info(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
       response.redirect("/login");
@@ -74,7 +74,7 @@ const accounts = {
     const updatedFirstName = {
       firstName: request.body.firstName,
     };
-    logger.debug(`Updating First Name ${userId}`);
+    //logger.debug(`Updating First Name ${userId}`);
     userstore.updateFirstName(userId, updatedFirstName);
     response.redirect("/profile");
   },
@@ -84,7 +84,7 @@ const accounts = {
     const updatedLastName = {
       lastName: request.body.lastName,
     };
-    logger.debug(`Updating Last Name ${userId}`);
+    //logger.debug(`Updating Last Name ${userId}`);
     userstore.updateLastName(userId, updatedLastName);
     response.redirect("/profile");
   },
