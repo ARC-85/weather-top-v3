@@ -30,6 +30,7 @@ router.get("/about", about.index);
 router.get("/stations/:id", stations.index);
 router.get("/stations/:id/deletereading/:readingid", stations.deleteReading);
 router.post("/stations/:id/addreading", stations.addReading);
+router.post("/stations/:id/addreport", stations.addreport);
 
 router.get("/readings/:id/editreading/:readingid", readings.index);
 router.post("/readings/:id/updatereading/:readingid", readings.update);

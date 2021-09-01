@@ -1,25 +1,40 @@
+<section class="ui inverted grey segment">
 <form class="ui stacked segment form" action="/stations/{{station.id}}/addreading" method="POST">
   <div class="five fields">
     <div class="field">
-      <label>Code</label>
+      <label class="ui teal label">Code</label>
       <input placeholder="0" type= "text" name="code">
     </div>
     <div class="field">
-      <label>Temperature</label>
+      <label class="ui teal label">Temperature</label>
       <input placeholder="0" type= "text" name="temperature">
     </div>
     <div class="field">
-      <label>Wind Speed</label>
+      <label class="ui teal label">Wind Speed</label>
       <input placeholder="0" type="text" name="windSpeed">
     </div>
     <div class="field">
-      <label>Pressure</label>
+      <label class="ui teal label">Pressure</label>
       <input placeholder="0" type="text" name="pressure">
     </div>
     <div class="field">
-      <label>Wind Direction</label>
+      <label class="ui teal label">Wind Direction</label>
       <input placeholder="0" type="text" name="windDirection">
     </div>
   </div>
-  <button class="ui blue submit button">Add Reading</button>
+  <button class="ui blue submit button">Manual Add Reading</button>
 </form>
+
+
+<form class="ui stacked segment form" action="/stations/{{station.id}}/addreport" method="POST">
+  <div class="two fields">
+    <div class="field">
+      <input placeholder={{station.latitude}} type="hidden" name="latitude" value={{station.latitude}}>
+    </div>
+    <div class="field">
+      <input placeholder={{station.longitude}} type="hidden" name="longitude" value={{station.longitude}}>
+    </div>
+  </div>
+  <button class="ui blue submit button">Auto Add Reading</button>
+</form>
+</section>
