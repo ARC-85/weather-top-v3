@@ -25,12 +25,26 @@ const stations = {
       report.pressure = reading.pressure;
       report.windDirection = reading.wind_deg;
       report.tempTrend = [];
-      report.trendLabels = [];
+      report.windyTrend = [];
+      report.pressTrend = [];
+      report.trendLabelsTemp = [];
+      report.trendLabelsWind = [];
+      report.trendLabelsPress = [];
       const trends = result.data.daily;
       for (let i=0; i<trends.length; i++) {
         report.tempTrend.push(trends[i].temp.day);
-        const date = new Date(trends[i].dt * 1000);
-        report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+        const dateTemp = new Date(trends[i].dt * 1000);
+        report.trendLabelsTemp.push(`${dateTemp.getDate()}/${dateTemp.getMonth()}/${dateTemp.getFullYear()}` );
+      }
+      for (let i=0; i<trends.length; i++) {
+        report.windyTrend.push(trends[i].wind_speed);
+        const dateWind = new Date(trends[i].dt * 1001);
+        report.trendLabelsWind.push(`${dateWind.getDate()}/${dateWind.getMonth()}/${dateWind.getFullYear()}` );
+      }
+      for (let i=0; i<trends.length; i++) {
+        report.pressTrend.push(trends[i].pressure);
+        const datePress = new Date(trends[i].dt * 1001);
+        report.trendLabelsPress.push(`${datePress.getDate()}/${datePress.getMonth()}/${datePress.getFullYear()}` );
       }
     }
     const weatherType = stationsAnalytics.getWeatherType(station);
@@ -121,12 +135,26 @@ const stations = {
       report.pressure = reading.pressure;
       report.windDirection = reading.wind_deg;
       report.tempTrend = [];
-      report.trendLabels = [];
+      report.windyTrend = [];
+      report.pressTrend = [];
+      report.trendLabelsTemp = [];
+      report.trendLabelsWind = [];
+      report.trendLabelsPress = [];
       const trends = result.data.daily;
       for (let i=0; i<trends.length; i++) {
         report.tempTrend.push(trends[i].temp.day);
-        const date = new Date(trends[i].dt * 1000);
-        report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+        const dateTemp = new Date(trends[i].dt * 1000);
+        report.trendLabelsTemp.push(`${dateTemp.getDate()}/${dateTemp.getMonth()}/${dateTemp.getFullYear()}` );
+      }
+      for (let i=0; i<trends.length; i++) {
+        report.windyTrend.push(trends[i].wind_speed);
+        const dateWind = new Date(trends[i].dt * 1001);
+        report.trendLabelsWind.push(`${dateWind.getDate()}/${dateWind.getMonth()}/${dateWind.getFullYear()}` );
+      }
+      for (let i=0; i<trends.length; i++) {
+        report.pressTrend.push(trends[i].pressure);
+        const datePress = new Date(trends[i].dt * 1001);
+        report.trendLabelsPress.push(`${datePress.getDate()}/${datePress.getMonth()}/${datePress.getFullYear()}` );
       }
     }
     console.log(report);

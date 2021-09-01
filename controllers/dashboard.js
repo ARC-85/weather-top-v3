@@ -17,7 +17,7 @@ const dashboard = {
       title: "Stations Dashboard",
       stations: stations,
     };
-    logger.info("about to render", stationsStore.getAllStations());
+    //logger.info("about to render", stationsStore.getAllStations());
     response.render("dashboard", viewData);
   },
 
