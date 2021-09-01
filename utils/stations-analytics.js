@@ -5,21 +5,21 @@ const stationsAnalytics = {
     let weatherType = null;
     const readings = station.readings;
     if (station.readings.length > 0) {
-      if (station.readings[station.readings.length - 1].code === 100) {
+      if (station.readings[station.readings.length - 1].code <= 100) {
         weatherType = "Clear";
-      } else if (station.readings[station.readings.length - 1].code === 200) {
+      } else if ((station.readings[station.readings.length - 1].code > 100) && (station.readings[station.readings.length - 1].code <= 200)) {
         weatherType = "Partial Clouds";
-      } else if (station.readings[station.readings.length - 1].code === 300) {
+      } else if ((station.readings[station.readings.length - 1].code > 200) && (station.readings[station.readings.length - 1].code <= 300)) {
         weatherType = "Cloudy";
-      } else if (station.readings[station.readings.length - 1].code === 400) {
+      } else if ((station.readings[station.readings.length - 1].code > 300) && (station.readings[station.readings.length - 1].code <= 400)) {
         weatherType = "Light Showers";
-      } else if (station.readings[station.readings.length - 1].code === 500) {
+      } else if ((station.readings[station.readings.length - 1].code > 400) && (station.readings[station.readings.length - 1].code <= 500)) {
         weatherType = "Heavy Showers";
-      } else if (station.readings[station.readings.length - 1].code === 600) {
+      } else if ((station.readings[station.readings.length - 1].code > 500) && (station.readings[station.readings.length - 1].code <= 600)) {
         weatherType = "Rain";
-      } else if (station.readings[station.readings.length - 1].code === 700) {
+      } else if ((station.readings[station.readings.length - 1].code > 600) && (station.readings[station.readings.length - 1].code <= 700)) {
         weatherType = "Snow";
-      } else if (station.readings[station.readings.length - 1].code === 800) {
+      } else if ((station.readings[station.readings.length - 1].code > 700) && (station.readings[station.readings.length - 1].code <= 810)) {
         weatherType = "Thunder";
       } else weatherType = "Unrecognised code";
     } else {
@@ -31,9 +31,9 @@ const stationsAnalytics = {
   getCelsius(station) {
     let celsius = null;
     if (station.readings.length > 0) {
-      celsius = station.readings[station.readings.length - 1].temperature + " Celsius";
+      celsius = station.readings[station.readings.length - 1].temperature;
     } else {
-      celsius = "No readings available.";
+      celsius = "?";
     }
     return celsius;
   },
@@ -43,9 +43,9 @@ const stationsAnalytics = {
     let fahrenheitTemp = null;
     if (station.readings.length > 0) {
       fahrenheitTemp = station.readings[station.readings.length - 1].temperature * 9 / 5 + 32; 
-      fahrenheit = fahrenheitTemp + " Fahrenheit";
+      fahrenheit = Math.round(fahrenheitTemp*100/100).toFixed(2); 
     } else {
-      fahrenheit = "No readings available.";
+      fahrenheit = "?";
     }
     return fahrenheit;
   },
@@ -56,11 +56,11 @@ const stationsAnalytics = {
       minimumTemperature = station.readings[0].temperature;
       for (let i = 1; i < station.readings.length; i++) {
         if (station.readings[i].temperature < minimumTemperature) {
-          minimumTemperature = "Min Temp: " + station.readings[i].temperature + " Celsius";
+          minimumTemperature = station.readings[i].temperature;
         }
       }
     } else {
-      minimumTemperature = "No readings available.";
+      minimumTemperature = "?";
     }
     return minimumTemperature;
   },
@@ -71,11 +71,11 @@ const stationsAnalytics = {
       maximumTemperature = station.readings[0].temperature;
       for (let i = 1; i < station.readings.length; i++) {
         if (station.readings[i].temperature > maximumTemperature) {
-          maximumTemperature = "Max Temp: " + station.readings[i].temperature + " Celsius";
+          maximumTemperature = station.readings[i].temperature;
         }
       }
     } else {
-      maximumTemperature = "No readings available.";
+      maximumTemperature = "?";
     }
     return maximumTemperature;
   },
@@ -140,7 +140,7 @@ const stationsAnalytics = {
             } else
                 windBeaufort = "Perfect Storm";
     } else {
-      windBeaufort = "No readings available.";
+      windBeaufort = "";
     }
     return windBeaufort;
   },
@@ -186,7 +186,7 @@ const stationsAnalytics = {
             } else
                 windDirect = "Even Breeze";
     } else {
-      windDirect = "No readings available.";
+      windDirect = "";
     }
     return windDirect;
   },
@@ -196,9 +196,9 @@ const stationsAnalytics = {
     let windTemp = null;
     if (station.readings.length > 0) {
       windChill = 13.12 + 0.6215 * station.readings[station.readings.length - 1].temperature - 11.37 * (Math.pow(station.readings[station.readings.length - 1].windSpeed, 0.16)) + 0.3965 * (Math.pow(station.readings[station.readings.length - 1].temperature, 0.16));
-      windTemp = "Feels like " + (Math.round(windChill * 100) / 100).toFixed(2) + " Celsius";
+      windTemp = (Math.round(windChill * 100) / 100).toFixed(2);
     } else {
-      windTemp = "No readings available.";
+      windTemp = "?";
     }
     return windTemp;
   },
@@ -209,11 +209,11 @@ const stationsAnalytics = {
       minimumWind = station.readings[0].windSpeed;
       for (let i = 0; i < station.readings.length; i++) {
         if (station.readings[i].windSpeed < minimumWind) {
-          minimumWind = "Min Wind: " + station.readings[i].windSpeed + " km/hr";
+          minimumWind = station.readings[i].windSpeed;
         }
       }
     } else {
-      minimumWind = "No readings available.";
+      minimumWind = "?";
     }
     return minimumWind;
   },
@@ -224,11 +224,11 @@ const stationsAnalytics = {
       maximumWind = station.readings[0].windSpeed;
       for (let i = 0; i < station.readings.length; i++) {
         if (station.readings[i].windSpeed > maximumWind) {
-          maximumWind = "Max Wind: " + station.readings[i].windSpeed + " km/hr";
+          maximumWind = station.readings[i].windSpeed;
         }
       }
     } else {
-      maximumWind = "No readings available.";
+      maximumWind = "?";
     }
     return maximumWind;
   },
@@ -265,9 +265,9 @@ const stationsAnalytics = {
   getPressureHpa(station) {
     let pressureHpa = null;
     if (station.readings.length > 0) {
-      pressureHpa = station.readings[station.readings.length - 1].pressure + " hPa";
+      pressureHpa = station.readings[station.readings.length - 1].pressure;
     } else {
-      pressureHpa = "No readings available.";
+      pressureHpa = "?";
     }
     return pressureHpa;
   },
@@ -278,11 +278,11 @@ const stationsAnalytics = {
       minimumPressure = station.readings[0].pressure;
       for (let i = 0; i < station.readings.length; i++) {
         if (station.readings[i].pressure < minimumPressure) {
-          minimumPressure = "Min Pressure: " + station.readings[i].pressure + " hPa";
+          minimumPressure = station.readings[i].pressure;
         }
       }
     } else {
-      minimumPressure = "No readings available.";
+      minimumPressure = "?";
     }
     return minimumPressure;
   },
@@ -293,11 +293,11 @@ const stationsAnalytics = {
       maximumPressure = station.readings[0].pressure;
       for (let i = 0; i < station.readings.length; i++) {
         if (station.readings[i].pressure > maximumPressure) {
-          maximumPressure = "Max Pressure: " + station.readings[i].pressure + " hPa";
+          maximumPressure = station.readings[i].pressure;
         }
       }
     } else {
-      maximumPressure = "No readings available.";
+      maximumPressure = "?";
     }
     return maximumPressure;
   },

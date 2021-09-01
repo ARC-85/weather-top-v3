@@ -4,13 +4,35 @@ const logger = require("../utils/logger");
 const stationsStore = require("../models/stations-store");
 const uuid = require("uuid");
 const stationsAnalytics = require("../utils/stations-analytics");
+const axios = require("axios");
 
 const stations = {
-  index(request, response) {
+  async index(request, response) {
     const stationId = request.params.id;
-    logger.debug("Station id = ", stationId);
-
     const station = stationsStore.getStation(stationId);
+    logger.debug("Station id = ", stationId);
+    
+    let report = {};
+    const latitude = station.latitude;
+    const longitude = station.longitude;
+    const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=1ab878c1802272481590a2f7cf32581d`
+    const result = await axios.get(requestUrl);
+    if (result.status == 200) {
+      const reading = result.data.current;
+      report.code = reading.weather[0].id;
+      report.temperature = reading.temp;
+      report.windSpeed = reading.wind_speed;
+      report.pressure = reading.pressure;
+      report.windDirection = reading.wind_deg;
+      report.tempTrend = [];
+      report.trendLabels = [];
+      const trends = result.data.daily;
+      for (let i=0; i<trends.length; i++) {
+        report.tempTrend.push(trends[i].temp.day);
+        const date = new Date(trends[i].dt * 1000);
+        report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+      }
+    }
     const weatherType = stationsAnalytics.getWeatherType(station);
     const celsius = stationsAnalytics.getCelsius(station);
     const fahrenheit = stationsAnalytics.getFahrenheit(station);
@@ -49,7 +71,10 @@ const stations = {
       minimumPressure: minimumPressure,
       maximumPressure: maximumPressure,
       pressureTrend: pressureTrend,
-      latestReading: latestReading
+      latestReading: latestReading,
+      reading: report,
+      latitude: latitude,
+      longitude: longitude
     };
     response.render("stations", viewData);
   },
@@ -72,6 +97,47 @@ const stations = {
       windSpeed: Number(request.body.windSpeed),
       pressure: Number(request.body.pressure),
       windDirection: Number(request.body.windDirection),
+      time: new Date()
+    };
+    logger.debug("New Reading = ", newReading);
+    stationsStore.addReading(stationId, newReading);
+    response.redirect("/stations/" + stationId);
+  },
+  
+  async addreport(request, response) {
+    const stationId = request.params.id;
+    const station = stationsStore.getStation(stationId);
+    logger.info("rendering new report");
+    let report = {};
+    const latitude = request.body.latitude;
+    const longitude = request.body.longitude;
+    const requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=1ab878c1802272481590a2f7cf32581d`
+    const result = await axios.get(requestUrl);
+    if (result.status == 200) {
+      const reading = result.data.current;
+      report.code = reading.weather[0].id;
+      report.temperature = reading.temp;
+      report.windSpeed = reading.wind_speed;
+      report.pressure = reading.pressure;
+      report.windDirection = reading.wind_deg;
+      report.tempTrend = [];
+      report.trendLabels = [];
+      const trends = result.data.daily;
+      for (let i=0; i<trends.length; i++) {
+        report.tempTrend.push(trends[i].temp.day);
+        const date = new Date(trends[i].dt * 1000);
+        report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+      }
+    }
+    console.log(report);
+    console.log(stationId);
+    const newReading = {
+      id: uuid.v1(),
+      code: report.code,
+      temperature: report.temperature,
+      windSpeed: report.windSpeed,
+      pressure: report.pressure,
+      windDirection: report.windDirection,
       time: new Date()
     };
     logger.debug("New Reading = ", newReading);
