@@ -45,7 +45,7 @@ const accounts = {
       firstName: request.body.firstName,
       lastName: request.body.lastName,
       email: request.body.email,
-      password: request.body.email,
+      password: request.body.password,
       id: uuid.v1()
       };
     userstore.addUser(user);
@@ -55,7 +55,8 @@ const accounts = {
   
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
-    if (user) {
+    const password = userstore.getUserByPassword(request.body.password);
+    if (user&&password) {
       response.cookie("stations", user.email);
       //logger.info(`logging in ${user.email}`);
       response.redirect("/dashboard");

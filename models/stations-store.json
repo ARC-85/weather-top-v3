@@ -395,6 +395,149 @@
       "pressureTrend": "No Pressure Trend",
       "latestReading": "2021-09-01T12:56:11.855Z",
       "latest": "2021-09-01T12:56:11.856Z"
+    },
+    {
+      "id": "30819ad0-0cca-11ec-8861-379e6c4e05d6",
+      "userid": "1691e530-0cca-11ec-8861-379e6c4e05d6",
+      "name": "London",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "readings": []
+    },
+    {
+      "id": "98a48a50-0cca-11ec-8861-379e6c4e05d6",
+      "userid": "80a3fa80-0cca-11ec-8861-379e6c4e05d6",
+      "name": "London",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "readings": [
+        {
+          "id": "a728aa70-0cca-11ec-8861-379e6c4e05d6",
+          "code": 803,
+          "temperature": 21.35,
+          "windSpeed": 4.63,
+          "pressure": 1020,
+          "windDirection": 100,
+          "time": "2021-09-03T15:21:46.903Z"
+        },
+        {
+          "id": "b8fbf590-0cca-11ec-8861-379e6c4e05d6",
+          "code": 600,
+          "temperature": 22,
+          "windSpeed": 3,
+          "pressure": 1000,
+          "windDirection": 349,
+          "time": "2021-09-03T15:22:16.809Z"
+        }
+      ],
+      "weatherType": "Rain",
+      "celsius": 22,
+      "fahrenheit": "72.00",
+      "windTemp": "13.89",
+      "minimumTemperature": 21.35,
+      "maximumTemperature": 22,
+      "temperatureTrend": "Increasing Temp Trend",
+      "windBeaufort": "Beaufort 1 (Light Air)",
+      "windDirect": "North",
+      "minimumWind": 3,
+      "maximumWind": 4.63,
+      "windTrend": "Decreasing Wind Trend",
+      "pressureHpa": 1000,
+      "minimumPressure": 1000,
+      "maximumPressure": 1020,
+      "pressureTrend": "Decreasing Pressure Trend",
+      "latestReading": "2021-09-03T15:22:16.809Z",
+      "latest": "2021-09-03T15:22:16.809Z"
+    },
+    {
+      "id": "20d237a0-0e6b-11ec-a80f-696b0c019324",
+      "userid": "11678810-0e6b-11ec-a80f-696b0c019324",
+      "name": "London",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "readings": [
+        {
+          "id": "3a22a000-0e6b-11ec-a80f-696b0c019324",
+          "code": 500,
+          "temperature": 4,
+          "windSpeed": 4.2,
+          "pressure": 1000,
+          "windDirection": 12,
+          "time": "2021-09-05T17:03:44.128Z"
+        },
+        {
+          "id": "49912020-0e6b-11ec-a80f-696b0c019324",
+          "code": 800,
+          "temperature": 24.43,
+          "windSpeed": 5.14,
+          "pressure": 1021,
+          "windDirection": 90,
+          "time": "2021-09-05T17:04:10.018Z"
+        }
+      ],
+      "weatherType": "Thunder",
+      "celsius": 24.43,
+      "fahrenheit": "76.00",
+      "windTemp": "14.19",
+      "minimumTemperature": 4,
+      "maximumTemperature": 24.43,
+      "temperatureTrend": "Increasing Temp Trend",
+      "windBeaufort": "Beaufort 2 (Light Breeze)",
+      "windDirect": "East",
+      "minimumWind": 4.2,
+      "maximumWind": 5.14,
+      "windTrend": "Increasing Wind Trend",
+      "pressureHpa": 1021,
+      "minimumPressure": 1000,
+      "maximumPressure": 1021,
+      "pressureTrend": "Increasing Pressure Trend",
+      "latestReading": "2021-09-05T17:04:10.018Z",
+      "latest": "2021-09-05T17:04:10.018Z"
+    },
+    {
+      "id": "69e6c720-0eee-11ec-9427-e5ac08c97339",
+      "userid": "53f2d030-0eee-11ec-9427-e5ac08c97339",
+      "name": "London",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "readings": [
+        {
+          "id": "864e81a0-0eee-11ec-9427-e5ac08c97339",
+          "code": 500,
+          "temperature": 4,
+          "windSpeed": 4.2,
+          "pressure": 1000,
+          "windDirection": 10,
+          "time": "2021-09-06T08:43:35.994Z"
+        },
+        {
+          "id": "96244f10-0eee-11ec-9427-e5ac08c97339",
+          "code": 803,
+          "temperature": 19.87,
+          "windSpeed": 2.06,
+          "pressure": 1024,
+          "windDirection": 100,
+          "time": "2021-09-06T08:44:02.561Z"
+        }
+      ],
+      "weatherType": "Thunder",
+      "celsius": 19.87,
+      "fahrenheit": "68.00",
+      "windTemp": "13.35",
+      "minimumTemperature": 4,
+      "maximumTemperature": 19.87,
+      "temperatureTrend": "Increasing Temp Trend",
+      "windBeaufort": "Beaufort 1 (Light Air)",
+      "windDirect": "East",
+      "minimumWind": 2.06,
+      "maximumWind": 4.2,
+      "windTrend": "Decreasing Wind Trend",
+      "pressureHpa": 1024,
+      "minimumPressure": 1000,
+      "maximumPressure": 1024,
+      "pressureTrend": "Increasing Pressure Trend",
+      "latestReading": "2021-09-06T08:44:02.561Z",
+      "latest": "2021-09-06T08:44:02.562Z"
     }
   ]
 }
