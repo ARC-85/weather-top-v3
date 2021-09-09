@@ -33,17 +33,17 @@ const stations = {
       const trends = result.data.daily;
       for (let i=0; i<trends.length; i++) {
         report.tempTrend.push(trends[i].temp.day);
-        const dateTemp = new Date(trends[i].dt * 1000);
+        const dateTemp = new Date(trends[i].dt * 1001.5);
         report.trendLabelsTemp.push(`${dateTemp.getDate()}/${dateTemp.getMonth()}/${dateTemp.getFullYear()}` );
       }
       for (let i=0; i<trends.length; i++) {
         report.windyTrend.push(trends[i].wind_speed);
-        const dateWind = new Date(trends[i].dt * 1001);
+        const dateWind = new Date(trends[i].dt * 1001.5);
         report.trendLabelsWind.push(`${dateWind.getDate()}/${dateWind.getMonth()}/${dateWind.getFullYear()}` );
       }
       for (let i=0; i<trends.length; i++) {
         report.pressTrend.push(trends[i].pressure);
-        const datePress = new Date(trends[i].dt * 1001);
+        const datePress = new Date(trends[i].dt * 1001.5);
         report.trendLabelsPress.push(`${datePress.getDate()}/${datePress.getMonth()}/${datePress.getFullYear()}` );
       }
     }
